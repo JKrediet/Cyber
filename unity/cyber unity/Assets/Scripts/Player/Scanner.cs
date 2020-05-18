@@ -3,6 +3,7 @@ public class Scanner : MonoBehaviour
 {
     private bool inLift = false;
     RaycastHit hit;
+    public GameObject lift;
 
     public Rune rune;
 
@@ -37,30 +38,12 @@ public class Scanner : MonoBehaviour
                 {
                     if (Input.GetButtonDown("Interaction"))
                     {
-                        //speel animatie af
-                        //scene switch
-                        //lighting
-                      
+                        //lift.< Lift > ().buttonPressed = true;
                     }
                 }
             }
         }
     }
-    private void OnTriggerEnter(Collider liftCollider)
-    {
-        if (liftCollider.gameObject.tag == "Lift")
-        {
-            inLift = true;
-        }
-    }
-    private void OnTriggerExit(Collider liftCollider)
-    {
-        if (liftCollider.gameObject.tag == "Lift")
-        {
-            inLift = false;
-        }
-    }
-
 
     public void ShowRuneInfo()
     {

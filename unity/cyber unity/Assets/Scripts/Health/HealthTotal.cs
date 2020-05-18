@@ -2,9 +2,10 @@
 
 public class HealthTotal : MonoBehaviour
 {
-    public int health;
+    public float health;
+    public float totalHealth;
 
-    public virtual void Health(int doDamage)
+    public virtual void Health(float doDamage)
     {
         health -= doDamage;
 

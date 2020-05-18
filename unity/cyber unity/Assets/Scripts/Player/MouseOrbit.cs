@@ -6,6 +6,7 @@ public class MouseOrbit : MonoBehaviour
 {
 
     public Transform target;
+    public Transform secondTarget;
     public float distance = 5.0f;
     public float xSpeed = 120.0f;
     public float ySpeed = 120.0f;
@@ -14,12 +15,15 @@ public class MouseOrbit : MonoBehaviour
     public float yMaxLimit = 80f;
 
     public float distanceMin = .5f;
+    public float distanceMid = 5f;
     public float distanceMax = 15f;
 
     private Rigidbody rb;
 
     float x = 0.0f;
     float y = 0.0f;
+
+    private bool waitForMe;
 
     // Use this for initialization
     void Start()
@@ -55,6 +59,7 @@ public class MouseOrbit : MonoBehaviour
             {
                 distance -= hit.distance;
             }
+
             Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
             Vector3 position = rotation * negDistance + target.position;
 

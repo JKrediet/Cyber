@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         movementDirection.y -= gravity * Time.deltaTime;
         characterController.Move(movementDirection * Time.deltaTime);
 
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical") || Input.GetButton("Fire2") || Input.GetButton("Fire1"))
         {
             transform.forward = new Vector3(cameraRotation.transform.forward.x, transform.forward.y, cameraRotation.transform.forward.z);
         }
