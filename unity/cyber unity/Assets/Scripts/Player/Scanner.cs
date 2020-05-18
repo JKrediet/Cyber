@@ -40,7 +40,7 @@ public class Scanner : MonoBehaviour
                         //speel animatie af
                         //scene switch
                         //lighting
-                        hit.transform.gameObject.GetComponent<LiftKnop>().Knipper();
+                      
                     }
                 }
             }
