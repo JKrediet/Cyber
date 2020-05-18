@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4bd61a5c0feef334890a3e7e47711068
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - arrow: {fileID: -6703392881273007985, guid: dbbd004246e70d74f9d263ced4a78dd6,
+      type: 3}
+  - aimPowerSlider: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
