@@ -8721,8 +8721,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: new croc
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7622728072016335645, guid: 963162f72c8224843ac2f80e3403f2d2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 963162f72c8224843ac2f80e3403f2d2, type: 3}
+--- !u!1 &1924125709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8477749913909665253, guid: 963162f72c8224843ac2f80e3403f2d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1924125708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1924125710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924125709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc1feadd48a9584bbe290ca74f63657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  totalHealth: 0
+  expValue: 100000
 --- !u!1001 &1924787690
 PrefabInstance:
   m_ObjectHideFlags: 0

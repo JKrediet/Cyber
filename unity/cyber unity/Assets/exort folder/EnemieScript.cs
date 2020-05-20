@@ -31,7 +31,7 @@ public class EnemieScript : MonoBehaviour
     }
     public void HealthUpdate()
     {
-        healtStatus = GetComponent<Health>().health;
+        healtStatus = GetComponent<HealthTestEnemy>().health;
         if (healtStatus <= 0)
         {   
                 StartCoroutine(Death()); 
