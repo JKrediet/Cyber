@@ -1,17 +1,13 @@
 ﻿using UnityEngine;
 public class Scanner : MonoBehaviour
 {
-    private bool inLift = false;
     RaycastHit hit;
     public GameObject lift;
-
     public Rune rune;
 
     void Update()
     {
         RayCast();
-        ShowRuneInfo();
-
         Debug.DrawRay(transform.position, transform.forward, Color.red);
     }
 
@@ -34,20 +30,13 @@ public class Scanner : MonoBehaviour
             // interaction met liftknop
             if (hit.transform.tag == "Lift Knop")
             {
-                if (inLift == true)
+
+                if (Input.GetButtonDown("Interaction"))
                 {
-                    if (Input.GetButtonDown("Interaction"))
-                    {
-                        //lift.< Lift > ().buttonPressed = true;
-                    }
+                    // lift<Elevator>().ButtonPressed
                 }
+
             }
         }
-    }
-
-    public void ShowRuneInfo()
-    {
-        // show hiero de info van rune
-        // en dat je hiero je skill point display rechts boven ofz krijgt
     }
 }
