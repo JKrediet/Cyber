@@ -16,26 +16,24 @@ public class Scanner : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, 20))
         {
             // hit.transform.gameObject.GetComponent.< Rune > ();
-            if (hit.transform.tag == "Rune")
+            if (Input.GetButtonDown("Interaction"))
             {
-                if (Input.GetButtonDown("Interaction"))
+                if (hit.transform.tag == "Rune")
                 {
                     rune = hit.transform.gameObject.GetComponent<Reference>().rune;
                     print(rune.runeName);
-                    print(rune.runeDesc);
-                    print(rune.runeObject);
+                    //print(rune.runeDesc);
+                    //print(rune.runeObject);
                 }
             }
 
             // interaction met liftknop
-            if (hit.transform.tag == "Lift Knop")
+            if  (Input.GetButtonDown("Interaction"))
             {
-
-                if (Input.GetButtonDown("Interaction"))
+                if (hit.transform.tag == "Button")
                 {
-                    // lift<Elevator>().ButtonPressed
+                    FindObjectOfType<Elevator>().StartLift();
                 }
-
             }
         }
     }

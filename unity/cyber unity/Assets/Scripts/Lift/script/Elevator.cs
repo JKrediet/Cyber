@@ -18,6 +18,11 @@ public class Elevator : MonoBehaviour
     public GameObject lightRed, LightWhite;
     public GameObject hitBox;
 
+    public void StartLift()
+    {
+        buttonPressed = true;
+        hitBox.SetActive(true);
+    }
     private void Start()
     {
         lightRed.SetActive(false);
@@ -29,7 +34,7 @@ public class Elevator : MonoBehaviour
     public void Update()
     {
 
-        if (buttonPressed==true)
+        if (buttonPressed == true)
         {
             print("ff kijken");
             lightTrigger = true;
@@ -56,7 +61,6 @@ public class Elevator : MonoBehaviour
         if (knipperCount <= deurDichtGaanTijd)
         {
             LightRood();
-           
         }
         else {
             DoorClosed();

@@ -11,6 +11,9 @@ public class RangedBehavior : MonoBehaviour
         if(col.gameObject.tag == "Enemy")
         {
             col.gameObject.GetComponent<HealthTotal>().Health(givenDamage);
+        }
+        if (col.gameObject.tag != "Player")
+        {
             transform.parent = col.transform;
             this.GetComponent<Rigidbody>().isKinematic = true;
             this.GetComponent<Collider>().enabled = false;

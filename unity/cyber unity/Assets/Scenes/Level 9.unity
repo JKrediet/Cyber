@@ -1749,6 +1749,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12a879c39d17dfd4d887035acba2c8f9, type: 3}
+--- !u!1 &356540531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8079691008076130551, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1636327252}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &364444672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 8ff4845a43b750043a584cc3b8a078f3,
@@ -2871,6 +2877,10 @@ PrefabInstance:
       propertyPath: aimPowerSlider
       value: 
       objectReference: {fileID: 156791475}
+    - target: {fileID: 2068227901, guid: 0ecec1181b3d55942875866aa48db1f6, type: 3}
+      propertyPath: distanceMin
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5014653770665744416, guid: 0ecec1181b3d55942875866aa48db1f6,
         type: 3}
       propertyPath: m_Name
@@ -7266,6 +7276,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5279523181816397108, guid: 77fe763325729e04d98ca109d2dd4a5d,
+        type: 3}
+      propertyPath: rangedAttack
+      value: 
+      objectReference: {fileID: 356540531}
+    - target: {fileID: 5279523181816397108, guid: 77fe763325729e04d98ca109d2dd4a5d,
+        type: 3}
+      propertyPath: skillTree
+      value: 
+      objectReference: {fileID: 1647030751}
     - target: {fileID: 5279523181816397109, guid: 77fe763325729e04d98ca109d2dd4a5d,
         type: 3}
       propertyPath: m_Name
@@ -7836,6 +7856,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8079691006981632330, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: rCChance
+      value: 12,5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006981632330, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: rCDamage
+      value: 1,5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006981632330, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: mCDamage
+      value: 1,5
+      objectReference: {fileID: 0}
     - target: {fileID: 8079691007344998398, guid: df119559921f0874888211a9c93c8fbe,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -7958,6 +7993,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df119559921f0874888211a9c93c8fbe, type: 3}
+--- !u!1 &1647030751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8079691007137598383, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1636327252}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1699843764
 PrefabInstance:
   m_ObjectHideFlags: 0

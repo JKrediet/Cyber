@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b80755dddb48e8144ba26fe2c7caf8a8, type: 3}
-  m_Name: Rune 1
+  m_Script: {fileID: 11500000, guid: 05c7a5d6c5f9da049bf080da91896cbd, type: 3}
+  m_Name: Rune level 7
   m_EditorClassIdentifier: 
-  runeObject: {fileID: 1434961928430105363, guid: c4f79a14592d8744c826be124dacbddb,
+  runeObject: {fileID: 3643537907266962087, guid: abfdbe3c3ce11de42a897645a75448ca,
     type: 3}
-  runeName: unindentified rune
-  runeDesc: de eerste rune
+  runeName: Ooga Booga
+  runeDesc: Me give you a skilloint!
   skillPoint: 1
