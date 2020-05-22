@@ -30,7 +30,7 @@ public class HealthPlayer : HealthTotal
 
         if (health <= 0)
         {
-            Destroy(gameObject, 3f);
+           
         }
     }
 

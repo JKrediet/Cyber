@@ -33,8 +33,10 @@ public class EnemieScript : MonoBehaviour
     {
         healtStatus = GetComponent<HealthTestEnemy>().health;
         if (healtStatus <= 0)
-        {   
+        {
+            walking = false;
                 StartCoroutine(Death()); 
+
         }
     }
     IEnumerator Death()
@@ -80,7 +82,7 @@ public class EnemieScript : MonoBehaviour
         isAtacking = true;
         GetComponent<NavMeshAgent>().speed = 0;
         StartAtackAnim();
-        player.GetComponent<Health>().DoDamage(enemieDamage);
+        player.GetComponent<HealthPlayer>().Health(enemieDamage);
         print("dodamgae");
         yield return new WaitForSeconds(3);
         print("loop");

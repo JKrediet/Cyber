@@ -11,7 +11,7 @@ public class HealthTotal : MonoBehaviour
 
         if(health <= 0)
         {
-            Destroy(gameObject, 3f);
+           
         }
     }
 }
