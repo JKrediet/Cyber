@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -18,6 +19,9 @@ public class UI_SkillTree : MonoBehaviour
 
     public List<int> Skill_Counter;
     public List<TextMeshProUGUI> Skill_CountText;
+
+    // buttons
+    private GameObject[] skills;
 
     private void Update()
     {
@@ -49,6 +53,37 @@ public class UI_SkillTree : MonoBehaviour
         skillPointAmount += skillPoint;
         skillPointText.text = skillPointAmount.ToString();
     }
+
+    public void ButtonToWhite()
+    {
+        if(hR5 == true)
+        {
+            skills = GameObject.FindGameObjectsWithTag("Health Skills");
+            
+            foreach(GameObject button in skills)
+            {
+                button.GetComponent<Image>().color = Color.white;
+            }
+        }
+        if (mR5 == true)
+        {
+            skills = GameObject.FindGameObjectsWithTag("Melee Skills");
+
+            foreach (GameObject button in skills)
+            {
+                button.GetComponent<Image>().color = Color.white;
+            }
+        }
+        if (rR5 == true)
+        {
+            skills = GameObject.FindGameObjectsWithTag("Ranged Skills");
+
+            foreach (GameObject button in skills)
+            {
+                button.GetComponent<Image>().color = Color.white;
+            }
+        }
+    }
     
     #region health skillnotes
     // health
@@ -67,6 +102,7 @@ public class UI_SkillTree : MonoBehaviour
                 if(maxHealthCount == 5)
                 {
                     hR5 = true;
+                    ButtonToWhite();
                 }
             }
         }
@@ -125,6 +161,7 @@ public class UI_SkillTree : MonoBehaviour
                 if (maxMeleeDamageCount == 5)
                 {
                     mR5 = true;
+                    ButtonToWhite();
                 }
             }
         }
@@ -183,6 +220,7 @@ public class UI_SkillTree : MonoBehaviour
                 if (maxRangedDamageCount == 5)
                 {
                     rR5 = true;
+                    ButtonToWhite();
                 }
             }
         }
