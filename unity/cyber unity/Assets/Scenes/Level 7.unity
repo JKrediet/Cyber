@@ -1708,6 +1708,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a022921770ea17c4fa64efb8a081f5e9, type: 3}
+--- !u!114 &250246980 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079691006613803164, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046388672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &257049117 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a7eff2d90607eba4c807b52aa53550ac,
@@ -1914,6 +1926,18 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &291312974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079691007226829263, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046388672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &291604324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2715,6 +2739,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2aa39112aba0d64baf21ff1bf7c121e, type: 3}
+--- !u!114 &376096357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079691008180166521, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046388672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &376191189 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8079691006655002798, guid: df119559921f0874888211a9c93c8fbe,
@@ -5815,6 +5851,30 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &645745423 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079691006814018851, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046388672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &649126075 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079691007929612771, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046388672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &656273285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6916,6 +6976,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1607565390}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &836100915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079691007486444143, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046388672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &857748406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7661,6 +7733,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 611685913}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &970603694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079691007979983373, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046388672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &974155228
 GameObject:
   m_ObjectHideFlags: 0
@@ -8391,6 +8475,31 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2046388672}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1112626587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112626586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411a306dfc5268c4aac575d4254c5916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPointAmount: 0
+  skillPointText: {fileID: 250246980}
+  Skill_Counter: 000000000000000000000000000000000000000000000000000000000000000000000000
+  Skill_CountText:
+  - {fileID: 376096357}
+  - {fileID: 1223171306}
+  - {fileID: 1649842230}
+  - {fileID: 645745423}
+  - {fileID: 970603694}
+  - {fileID: 836100915}
+  - {fileID: 1323155283}
+  - {fileID: 649126075}
+  - {fileID: 291312974}
 --- !u!1001 &1114855234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9528,6 +9637,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 149032624}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1223171306 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079691006479558020, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046388672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1228606432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10398,6 +10519,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70cf1082d64a68a458ac929b2a2ec0d9, type: 3}
+--- !u!114 &1323155283 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079691006831347261, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046388672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1327103031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: b18c03673675edf4584448fe8886658a,
@@ -12081,6 +12214,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ea44e90c714c8469d88513382e4ec7, type: 3}
+--- !u!114 &1649842230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079691007538654829, guid: df119559921f0874888211a9c93c8fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046388672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1655609903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: dccb388e466b10c4ab34a1a1047d5773,
@@ -15631,15 +15776,95 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8079691006233188592, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006233188592, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006233188592, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006233188593, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1112626587}
+    - target: {fileID: 8079691006233188593, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Skill_RangedDamage
+      objectReference: {fileID: 0}
     - target: {fileID: 8079691006259750489, guid: df119559921f0874888211a9c93c8fbe,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8079691006301256301, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Melee Skills
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006301256302, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006301256302, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006301256302, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006301256303, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1112626587}
+    - target: {fileID: 8079691006301256303, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Skill_MeleeCritChance
+      objectReference: {fileID: 0}
     - target: {fileID: 8079691006491044613, guid: df119559921f0874888211a9c93c8fbe,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006660591354, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006660591354, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006660591354, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006660591355, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1112626587}
+    - target: {fileID: 8079691006660591355, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Skill_Health
       objectReference: {fileID: 0}
     - target: {fileID: 8079691006660591356, guid: df119559921f0874888211a9c93c8fbe,
         type: 3}
@@ -15651,15 +15876,205 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChanceSkillInfo
       objectReference: {fileID: 0}
+    - target: {fileID: 8079691006698453152, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Melee Skills
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006698453154, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1112626587}
+    - target: {fileID: 8079691006698453154, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Skill_MeleeCritDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006698453157, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006698453157, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006698453157, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006703880635, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ranged Skills
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006703880636, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006703880636, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006703880636, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006703880637, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1112626587}
+    - target: {fileID: 8079691006703880637, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Skill_RangedCritChance
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006981329787, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Health Skills
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006981329788, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006981329788, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006981329788, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691006981329789, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1112626587}
+    - target: {fileID: 8079691006981329789, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Skill_HealthRegen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007137598355, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: Skill_Counter.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007137598355, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: Skill_CountText.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007137598355, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: skillPointText
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8079691007137598383, guid: df119559921f0874888211a9c93c8fbe,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007247561974, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007247561974, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007247561974, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007247561975, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1112626587}
+    - target: {fileID: 8079691007247561975, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Skill_MeleeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007291014625, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007291014625, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007291014625, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007291014652, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Health Skills
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007291014654, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1112626587}
+    - target: {fileID: 8079691007291014654, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Skill_ReducedDamageTaken
       objectReference: {fileID: 0}
     - target: {fileID: 8079691007344998398, guid: df119559921f0874888211a9c93c8fbe,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007692808528, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007692808528, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007692808528, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007692808529, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1112626587}
+    - target: {fileID: 8079691007692808529, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Skill_RangedCritDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079691007692808559, guid: df119559921f0874888211a9c93c8fbe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ranged Skills
       objectReference: {fileID: 0}
     - target: {fileID: 8079691008328053075, guid: df119559921f0874888211a9c93c8fbe,
         type: 3}
@@ -15776,7 +16191,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8079691007137598355, guid: df119559921f0874888211a9c93c8fbe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: df119559921f0874888211a9c93c8fbe, type: 3}
 --- !u!1 &2056390302
 GameObject:
