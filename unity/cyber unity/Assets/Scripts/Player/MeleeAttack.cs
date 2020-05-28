@@ -46,8 +46,12 @@ public class MeleeAttack : MonoBehaviour
             }
         }
     }
-
-
+    public void Reset()
+    {
+        MeleeDamageSkillnote(default);
+        MeleeCritChanceSkillnote(default);
+        MeleeCritDamageSkillnote(default);
+    }
     #region skillpoints
     // skillpoint reward > melee damage
     public void MeleeDamageSkillnote(float skillAmount)
@@ -58,7 +62,7 @@ public class MeleeAttack : MonoBehaviour
         maxMeleeDamage = newDamage;
 
         // naar stats in skilltree sturen
-        FindObjectOfType<UI_Skill_Info>().MDamage(maxMeleeDamage);
+        StuurMDamage();
     }
     // skillpoint reward > crit chance
     public void MeleeCritChanceSkillnote(float skillAmount)
@@ -69,7 +73,7 @@ public class MeleeAttack : MonoBehaviour
         critChance = newCritChance;
 
         // naar stats in skilltree sturen
-        FindObjectOfType<UI_Skill_Info>().MCChance(critChance);
+        StuurMCChance();
     }
     // skillpoint reward > crit damage
     public void MeleeCritDamageSkillnote(float skillAmount)
@@ -80,9 +84,43 @@ public class MeleeAttack : MonoBehaviour
         critDamage = newCritDamage;
 
         // naar stats in skilltree sturen
-        FindObjectOfType<UI_Skill_Info>().MCDamage(critDamage);
+        StuurMCDamage();
     }
     #endregion
+
+    public void StuurMDamage()
+    {
+        if (FindObjectOfType<UI_Skill_Info>() != null)
+        {
+            FindObjectOfType<UI_Skill_Info>().MDamage(maxMeleeDamage);
+        }
+        else
+        {
+            Invoke("StuurMDamage", 1);
+        }
+    }
+    public void StuurMCChance()
+    {
+        if (FindObjectOfType<UI_Skill_Info>() != null)
+        {
+            FindObjectOfType<UI_Skill_Info>().MCChance(critChance);
+        }
+        else
+        {
+            Invoke("StuurMCChance", 1);
+        }
+    }
+    public void StuurMCDamage()
+    {
+        if (FindObjectOfType<UI_Skill_Info>() != null)
+        {
+            FindObjectOfType<UI_Skill_Info>().MCDamage(critDamage);
+        }
+        else
+        {
+            Invoke("StuurMCDamage", 1);
+        }
+    }
 
     //debug
     private void OnDrawGizmosSelected()

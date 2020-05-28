@@ -9,7 +9,7 @@ public class RangedAttack : MonoBehaviour
 
     // arrow variables
     private float arrowSpeed, arrowDamage, baseMaxDamage;
-    public float aimPower,maxArrowPower, maxArrowDamage, arrowDamageIncreasement;
+    public float aimPower, maxArrowPower, maxArrowDamage, arrowDamageIncreasement;
 
     // crit
     private int isCrit;
@@ -39,15 +39,15 @@ public class RangedAttack : MonoBehaviour
             {
                 arrowSpeed = maxArrowPower;
             }
-            if(arrowDamage <= maxArrowDamage)
+            if (arrowDamage <= maxArrowDamage)
             {
                 arrowDamage += maxArrowDamage * Time.deltaTime;
             }
         }
-        if(Input.GetButtonUp("Fire2"))
-        { 
+        if (Input.GetButtonUp("Fire2"))
+        {
             // zorgen dat dmg niet meer dan max dmg is
-            if(arrowDamage > maxArrowDamage)
+            if (arrowDamage > maxArrowDamage)
             {
                 arrowDamage = maxArrowDamage;
             }
@@ -56,7 +56,7 @@ public class RangedAttack : MonoBehaviour
             isCrit = Random.Range(0, 101);
             if (critChance >= isCrit)
             {
-                arrowDamage *= critDamage; 
+                arrowDamage *= critDamage;
             }
             Rigidbody clone;
             clone = Instantiate(arrow, transform.position + transform.forward, transform.rotation);
@@ -67,7 +67,12 @@ public class RangedAttack : MonoBehaviour
             aimPowerSlider.value = arrowSpeed;
         }
     }
-
+    public void Reset()
+    {
+        RangedDamageSkillnote(default);
+        RangedCritChanceSkillnote(default);
+        RangedCritDamageSkillnote(default);
+    }
     #region skillpoints
     // skillpoint reward > ranged damage
     public void RangedDamageSkillnote(float skillAnount)
@@ -78,7 +83,7 @@ public class RangedAttack : MonoBehaviour
         maxArrowDamage = newDamage;
 
         // naar stats in skilltree sturen
-        FindObjectOfType<UI_Skill_Info>().RDamage(maxArrowDamage);
+        StuurRDamage();
     }
     // skillpoint reward > crit chance
     public void RangedCritChanceSkillnote(float skillAmount)
@@ -89,7 +94,7 @@ public class RangedAttack : MonoBehaviour
         critChance = newCritChance;
 
         // naar stats in skilltree sturen
-        FindObjectOfType<UI_Skill_Info>().RCChance(critChance);
+        StuurRCChance();
     }
     // skillpoint reward > crit damage
     public void RangedCritDamageSkillnote(float skillAmount)
@@ -100,7 +105,40 @@ public class RangedAttack : MonoBehaviour
         critDamage = newCritDamage;
 
         // naar stats in skilltree sturen
-        FindObjectOfType<UI_Skill_Info>().RCDamage(critDamage);
+        StuurRCDamage();
+    }
+    public void StuurRDamage()
+    {
+        if (FindObjectOfType<UI_Skill_Info>() != null)
+        {
+            FindObjectOfType<UI_Skill_Info>().RDamage(maxArrowDamage);
+        }
+        else
+        {
+            Invoke("StuurRDamage", 1);
+        }
+    }
+    public void StuurRCChance()
+    {
+        if (FindObjectOfType<UI_Skill_Info>() != null)
+        {
+            FindObjectOfType<UI_Skill_Info>().RCChance(critChance);
+        }
+        else
+        {
+            Invoke("StuurRCChance", 1);
+        }
+    }
+    public void StuurRCDamage()
+    {
+        if (FindObjectOfType<UI_Skill_Info>() != null)
+        {
+            FindObjectOfType<UI_Skill_Info>().RCDamage(critDamage);
+        }
+        else
+        {
+            Invoke("StuurRCDamage", 1);
+        }
     }
     #endregion
 }

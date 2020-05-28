@@ -11,6 +11,21 @@ public class UI_Skill_Info : MonoBehaviour
 
     public string health, hRegen, rIDamage, mDamage, mCChance, mCDamage, rDamage, rCChance, rCDamage;
 
+    public void Awake()
+    {
+        health = PlayerPrefs.GetString("healthStat", health);
+        hRegen = PlayerPrefs.GetString("hRegenStat", hRegen);
+        rIDamage = PlayerPrefs.GetString("rIDamageStat", rIDamage);
+
+        mDamage = PlayerPrefs.GetString("mDamageStat", mDamage);
+        mCChance = PlayerPrefs.GetString("MCChanceStat", mCChance);
+        mCDamage = PlayerPrefs.GetString("mCDamageStat", mCDamage);
+
+        rDamage = PlayerPrefs.GetString("rDamageStat", rDamage);
+        rCChance = PlayerPrefs.GetString("rCChance", rCChance);
+        rCDamage = PlayerPrefs.GetString("rCDamageStat", rCDamage);
+    }
+
     private void Start()
     {
         Stats();
@@ -31,6 +46,31 @@ public class UI_Skill_Info : MonoBehaviour
         statInfo[6].text = rDamage;
         statInfo[7].text = rCChance + "%";
         statInfo[8].text = rCDamage + "x";
+    }
+
+    //saves
+    private void Update()
+    {
+        if (Input.GetButtonDown("Interaction"))
+        {
+            Saves_Stats();
+        }
+    }
+    public void Saves_Stats()
+    {
+        PlayerPrefs.SetString("healthStat", health);
+        PlayerPrefs.SetString("hRegenStat", hRegen);
+        PlayerPrefs.SetString("rIDamageStat", rIDamage);
+
+        PlayerPrefs.SetString("mDamageStat", mDamage);
+        PlayerPrefs.SetString("MCChanceStat", mCChance);
+        PlayerPrefs.SetString("mCDamageStat", mCDamage);
+
+        PlayerPrefs.SetString("rDamageStat", rDamage);
+        PlayerPrefs.SetString("rCChance", rCChance);
+        PlayerPrefs.SetString("rCDamageStat", rCDamage);
+
+        PlayerPrefs.Save();
     }
 
     #region Stat info binnenkrijgen

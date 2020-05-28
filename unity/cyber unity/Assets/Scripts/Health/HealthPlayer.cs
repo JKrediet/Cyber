@@ -30,7 +30,7 @@ public class HealthPlayer : HealthTotal
 
         if (health <= 0)
         {
-           
+            Destroy(gameObject, 3f);
         }
     }
 
@@ -45,7 +45,6 @@ public class HealthPlayer : HealthTotal
         Mathf.Clamp(health, 0, totalHealth);
         health += heal;
     }
-
     #region skillnotes
     // skillpoint reward more health
     public void HealthSkillNote(float skillAmount)
@@ -57,7 +56,7 @@ public class HealthPlayer : HealthTotal
         health = totalHealth;
 
         // naar stats in skilltree sturen
-        FindObjectOfType<UI_Skill_Info>().Health(totalHealth);
+        StuurHealth();
     }
     // skillpoint health regen
     public void HealthRegenSkillNote(float skillAmount)
@@ -68,7 +67,7 @@ public class HealthPlayer : HealthTotal
         healthRegen = newRegen;
 
         // naar stats in skilltree sturen
-        FindObjectOfType<UI_Skill_Info>().HRegen(healthRegen);
+        StuurRegen();
     }
     // skillpoint reduced damage taken
     public void ReducedDamageTakenSkillNote(float skillAmount)
@@ -78,7 +77,48 @@ public class HealthPlayer : HealthTotal
 
         reducedDamageTaken = newReducedDamage;
         // naar stats in skilltree sturen
-        FindObjectOfType<UI_Skill_Info>().RIDamage(reducedDamageTaken);
+        StuurReduction();
     }
     #endregion
+
+    public void Reset()
+    {
+        HealthSkillNote(default);
+        HealthRegenSkillNote(default);
+        ReducedDamageTakenSkillNote(default);
+    }
+
+    public void StuurHealth()
+    {
+        if (FindObjectOfType<UI_Skill_Info>() != null)
+        {
+            FindObjectOfType<UI_Skill_Info>().Health(totalHealth);
+        }
+        else
+        {
+            Invoke("StuurHealth", 1);
+        }
+    }
+    public void StuurRegen()
+    {
+        if (FindObjectOfType<UI_Skill_Info>() != null)
+        {
+            FindObjectOfType<UI_Skill_Info>().HRegen(healthRegen);
+        }
+        else
+        {
+            Invoke("StuurRegen", 1);
+        }
+    }
+    public void StuurReduction()
+    {
+        if (FindObjectOfType<UI_Skill_Info>() != null)
+        {
+            FindObjectOfType<UI_Skill_Info>().RIDamage(reducedDamageTaken);
+        }
+        else
+        {
+            Invoke("StuurReduction", 1);
+        }
+    }
 }
