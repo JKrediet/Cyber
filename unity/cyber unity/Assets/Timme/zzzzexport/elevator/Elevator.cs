@@ -11,32 +11,36 @@ public class Elevator : MonoBehaviour
     public int deurDichtGaanTijd;
     public int knipperCount;
     public int sceneInt;
-    public GameObject lightRed, LightWhite;
     public GameObject hitBox;
 
     private void Start()
-    {
-        lightRed.SetActive(false);
+    {       
         knipperCount = 0;
-        hitBox.SetActive(false);
-        lightTrigger = false;
+        hitBox.SetActive(false);       
         buttonPressed = false;
     }
     public void Update()
     {
         if (DeadBoss == true)
         {
-            anim.SetInteger("Condition", 1);
+            //  anim.SetInteger("Condition", 1);
+            hitBox.SetActive(false);
+        }
+        else
+        {
+            hitBox.SetActive(true);
         }
         if (buttonPressed==true)
         {
-            print("ff kijken");
-            lightTrigger = true;
-            anim.SetInteger("Condition", 2);
-            Invoke("ClosingDoors", 2f);
-        }
-        if (lightTrigger == true) {
-            Invoke("Flash", 3f);
+            if (DeadBoss == true)
+            {
+                print("ff kijken");
+                lightTrigger = true;
+                anim.SetInteger("Condition", 2);
+                Invoke("ClosingDoors", 2f);
+                hitBox.SetActive(true);
+
+            }
         }
     }
     public void ButtonPressed()
@@ -54,29 +58,15 @@ public class Elevator : MonoBehaviour
         knipperCount++;
         if (knipperCount <= deurDichtGaanTijd)
         {
-            LightRood();
+      
            
         }
         else {
             DoorClosed();
         }
     }
-
-    public void LightRood()
-    {
-        LightWhite.SetActive(false);
-        lightRed.SetActive(true);
-    }
-    public void LightWit()
-    {
-        LightWhite.SetActive(true);
-        lightRed.SetActive(false);
-    }
     public void DoorClosed()
     {
-        hitBox.SetActive(true);
-        LightWhite.SetActive(true);
-        lightRed.SetActive(false);
         SceneManager.LoadScene(sceneInt);
     }
 }
