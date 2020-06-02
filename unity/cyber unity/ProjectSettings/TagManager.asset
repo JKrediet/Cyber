@@ -16,6 +16,7 @@ TagManager:
   - arrow
   - aim hud
   - sword
+  - raycastpoint
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,12 @@ public class Scanner : MonoBehaviour
     RaycastHit hit;
     public GameObject lift;
     public Rune rune;
+    public GameObject raycastpoint;
 
+    private void Start()
+    {
+        raycastpoint = GameObject.FindGameObjectWithTag("raycastpoint");
+    }
     void Update()
     {
         RayCast();
@@ -13,7 +18,7 @@ public class Scanner : MonoBehaviour
 
     public void RayCast()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 20))
+        if (Physics.Raycast(raycastpoint.transform.position, transform.forward, out hit, 20))
         {
             // hit.transform.gameObject.GetComponent.< Rune > ();
             if (Input.GetButtonDown("Interaction"))
@@ -26,15 +31,20 @@ public class Scanner : MonoBehaviour
                     //print(rune.runeObject);
                 }
             }
+            Test();
 
             // interaction met liftknop
             if  (Input.GetButtonDown("Interaction"))
             {
                 if (hit.transform.tag == "Button")
                 {
-                    FindObjectOfType<Elevator>().StartLift();
+                    FindObjectOfType<Elevator>().buttonPressed = true;
                 }
             }
         }
+    }
+    public void Test()
+    {
+        Debug.DrawRay(raycastpoint.transform.position, transform.forward, Color.red);
     }
 }
