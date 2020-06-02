@@ -10,6 +10,12 @@ TagManager:
   - Melee Skills
   - Ranged Skills
   - Health Skills
+  - Siring
+  - Potion
+  - bow
+  - arrow
+  - aim hud
+  - sword
   layers:
   - Default
   - TransparentFX
