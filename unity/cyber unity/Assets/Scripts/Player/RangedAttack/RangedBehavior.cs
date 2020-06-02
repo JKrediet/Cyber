@@ -15,8 +15,9 @@ public class RangedBehavior : MonoBehaviour
         if (col.gameObject.tag != "Player")
         {
             transform.parent = col.transform;
-           this.GetComponent<Rigidbody>().isKinematic = true;
-            this.GetComponent<Collider>().enabled = false;
+            GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<Collider>().enabled = false;
+            Destroy(this, 10);
         }
     }
 }

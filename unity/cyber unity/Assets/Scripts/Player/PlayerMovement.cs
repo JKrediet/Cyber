@@ -12,12 +12,19 @@ public class PlayerMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     public float gravity = -1f;
     float turnSmoothVelocity;
+    public bool isAiming = false;
+
+    private float horizontal, vertical;
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float Vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, Vertical).normalized;
+        if(isAiming == false)
+        {
+             horizontal = Input.GetAxisRaw("Horizontal");
+             vertical = Input.GetAxisRaw("Vertical");
+        }
+
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         if (direction.magnitude >= 0.1f)
         {
@@ -32,6 +39,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Fire2") || Input.GetButton("Fire1"))
         {
             transform.forward = new Vector3(cam.forward.x, transform.forward.y, cam.forward.z);
+            isAiming = true;
+            horizontal = 0;
+            vertical = 0;
+        }
+        else
+        {
+            isAiming = false;
         }
     }
 }

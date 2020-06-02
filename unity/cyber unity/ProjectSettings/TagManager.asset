@@ -17,6 +17,7 @@ TagManager:
   - aim hud
   - sword
   - raycastpoint
+  - Arrow
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - 
   - Enemy
   - reling
-  - 
+  - Arrow
   - 
   - 
   - 

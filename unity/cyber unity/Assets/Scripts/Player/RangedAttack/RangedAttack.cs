@@ -5,7 +5,7 @@ public class RangedAttack : MonoBehaviour
 {
     public Rigidbody arrow;
     public Slider aimPowerSlider;
-    public Transform arrowForward;
+    public Transform arrowForward, test;
 
     // arrow variables
     private float arrowSpeed, arrowDamage, baseMaxDamage;
@@ -59,7 +59,7 @@ public class RangedAttack : MonoBehaviour
                 arrowDamage *= critDamage;
             }
             Rigidbody clone;
-            clone = Instantiate(arrow, transform.position + transform.forward, transform.rotation);
+            clone = Instantiate(arrow, test.position + test.forward, arrowForward.rotation);
             clone.gameObject.GetComponent<RangedBehavior>().givenDamage = arrowDamage;
             clone.velocity = transform.TransformDirection(0, arrowForward.forward.y * arrowSpeed, 1 * arrowSpeed);
             arrowSpeed = 0;
