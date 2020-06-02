@@ -9,13 +9,11 @@ public class Elevator : MonoBehaviour
     public Animator anim;
     public bool lightTrigger,buttonPressed,DeadBoss;
     public int deurDichtGaanTijd;
-    public int knipperCount;
     public int sceneInt;
     public GameObject hitBox;
 
     private void Start()
     {       
-        knipperCount = 0;
         hitBox.SetActive(false);       
         buttonPressed = false;
     }
@@ -23,7 +21,7 @@ public class Elevator : MonoBehaviour
     {
         if (DeadBoss == true)
         {
-            //  anim.SetInteger("Condition", 1);
+            anim.SetInteger("Condition", 1);
             hitBox.SetActive(false);
         }
         else
@@ -51,20 +49,10 @@ public class Elevator : MonoBehaviour
     public void ClosingDoors()
     {
         anim.SetInteger("Condition", 3);
-        buttonPressed = false;
+        Invoke("DoorClosed", (deurDichtGaanTijd));
     }
-    public void Flash()
-    {
-        knipperCount++;
-        if (knipperCount <= deurDichtGaanTijd)
-        {
-      
-           
-        }
-        else {
-            DoorClosed();
-        }
-    }
+    
+    
     public void DoorClosed()
     {
         SceneManager.LoadScene(sceneInt);
