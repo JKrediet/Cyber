@@ -15,13 +15,20 @@ public class PlayerMovement : MonoBehaviour
     public bool isAiming = false;
 
     private float horizontal, vertical;
+    public Mc mc;
+    public Animator anim;
 
     void Update()
     {
         if(isAiming == false)
         {
+            StartWalkAnim();
              horizontal = Input.GetAxisRaw("Horizontal");
              vertical = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            StartBowAimAnim();
         }
 
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -47,5 +54,54 @@ public class PlayerMovement : MonoBehaviour
         {
             isAiming = false;
         }
+    }
+    public void StartIdleAnim()
+    {
+        StopAllAnim();
+        anim.SetBool("IsIdleing", true);
+    }
+    public void StartWalkAnim()
+    {
+        mc.arrowb = false;
+        mc.bowb = false;
+        mc.bowsinb = false;
+        mc.swordb = false;  
+        StopAllAnim();
+        anim.SetBool("IsWalking", true);
+    }
+    public void StartAtackSword1Anim()
+    {
+        StopAllAnim();
+        int random = Random.Range(0, 2);
+        if (random == 0)
+        {
+            anim.SetBool("IsAtackingSword1", true);
+        }
+        else if (random == 1)
+        {
+            anim.SetBool("IsAtackingSword2", true);
+        }
+    }
+    public void StartBowAimAnim()
+    {
+        StopAllAnim();
+        mc.arrowb = true;
+        mc.bowb = true;
+        mc.bowsinb = true;
+        anim.SetBool("IsBowAiming", true);
+    }
+    public void StartBowreleaseAnim()
+    {
+        StopAllAnim();
+        anim.SetBool("IsBowRealesing", true);
+    }
+    public void StopAllAnim()
+    {
+        anim.SetBool("IsBowRealesing", false);
+        anim.SetBool("IsBowAiming", false);
+        anim.SetBool("IsAtackingSword2", false);
+        anim.SetBool("IsAtackingSword1", false);
+        anim.SetBool("IsWalking", false);
+        anim.SetBool("IsIdleing", false);
     }
 }
