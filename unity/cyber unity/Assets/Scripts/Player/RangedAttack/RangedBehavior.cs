@@ -17,7 +17,7 @@ public class RangedBehavior : MonoBehaviour
             transform.parent = col.transform;
             GetComponent<Rigidbody>().isKinematic = true;
             GetComponent<Collider>().enabled = false;
-            Destroy(this, 10);
+            Destroy(gameObject, 2);
         }
     }
 }

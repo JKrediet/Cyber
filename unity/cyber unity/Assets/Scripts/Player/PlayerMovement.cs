@@ -59,9 +59,19 @@ public class PlayerMovement : MonoBehaviour
             moveDir.y -= gravity * Time.deltaTime;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
-        if (Input.GetButton("Fire2") || Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire2"))
         {
             transform.forward = new Vector3(cam.forward.x, transform.forward.y, cam.forward.z);
+            isAiming = true;
+            horizontal = 0;
+            vertical = 0;
+        }
+        else
+        {
+            isAiming = false;
+        }
+        if (Input.GetButton("Fire1"))
+        {
             isAiming = true;
             horizontal = 0;
             vertical = 0;
@@ -89,6 +99,9 @@ public class PlayerMovement : MonoBehaviour
     {
         StopAllAnim();
         mc.swordb = true;
+        mc.arrowb = false;
+        mc.bowb = false;
+        mc.bowsinb = false;
         int random = Random.Range(0, 2);
         if (random == 0)
         {
@@ -102,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
     public void StartBowAimAnim()
     {
         StopAllAnim();
+        mc.swordb = false;
         mc.arrowb = true;
         mc.bowb = true;
         mc.bowsinb = true;
@@ -110,6 +124,7 @@ public class PlayerMovement : MonoBehaviour
     public void StartBowreleaseAnim()
     {
         StopAllAnim();
+        mc.bowsinb = false;
         anim.SetBool("IsBowRealesing", true);
     }
     public void StopAllAnim()
