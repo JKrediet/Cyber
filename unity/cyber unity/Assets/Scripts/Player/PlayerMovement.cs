@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     public float gravity = -1f;
     float turnSmoothVelocity;
-    public bool isAiming = false;
+    public bool isAiming = false, isAttacking = false;
 
     private float horizontal, vertical;
     public Mc mc;
@@ -22,27 +22,38 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isAiming == false)
         {
-            if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+            if (isAttacking == false)
             {
-                StartWalkAnim();
+                if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+                {
+                    StartWalkAnim();
+                }
+                else
+                {
+                    StartIdleAnim();
+                }
+                horizontal = Input.GetAxisRaw("Horizontal");
+                vertical = Input.GetAxisRaw("Vertical");
             }
-            else
-            {
-                StartIdleAnim();
-            }
-            horizontal = Input.GetAxisRaw("Horizontal");
-            vertical = Input.GetAxisRaw("Vertical");
         }
         if (Input.GetButton("Fire1"))
         {
-            StartAtackSword1Anim();
+            if(isAttacking == false)
+            {
+                StartAtackSword1Anim();
+                isAttacking = true;
+                Invoke("StopAllAnim", 0.7f);
+                Invoke("IsAttacking", 0.7f);
+            }
         }
         if (Input.GetButton("Fire2"))
         {
+            transform.forward = new Vector3(cam.forward.x, transform.forward.y, cam.forward.z);
             StartBowAimAnim();
         }
         if (Input.GetButtonUp("Fire2"))
         {
+            StopAllAnim();
             StartBowreleaseAnim();
         }
 
@@ -59,18 +70,7 @@ public class PlayerMovement : MonoBehaviour
             moveDir.y -= gravity * Time.deltaTime;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
-        if (Input.GetButton("Fire2"))
-        {
-            transform.forward = new Vector3(cam.forward.x, transform.forward.y, cam.forward.z);
-            isAiming = true;
-            horizontal = 0;
-            vertical = 0;
-        }
-        else
-        {
-            isAiming = false;
-        }
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire2") || Input.GetButton("Fire1"))
         {
             isAiming = true;
             horizontal = 0;
@@ -80,6 +80,11 @@ public class PlayerMovement : MonoBehaviour
         {
             isAiming = false;
         }
+    }
+
+    public void IsAttacking()
+    {
+        isAttacking = false;
     }
     public void StartIdleAnim()
     {

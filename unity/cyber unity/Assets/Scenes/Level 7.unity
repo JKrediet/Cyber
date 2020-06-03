@@ -6412,7 +6412,7 @@ PrefabInstance:
     - target: {fileID: 3891479163963514388, guid: df709b5970d39ec4d836e9ad010d15d8,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12106747
+      value: 0.12106748
       objectReference: {fileID: 0}
     - target: {fileID: 3891479163963514388, guid: df709b5970d39ec4d836e9ad010d15d8,
         type: 3}
@@ -6617,7 +6617,7 @@ PrefabInstance:
     - target: {fileID: 3891479165816870247, guid: df709b5970d39ec4d836e9ad010d15d8,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.108408906
+      value: -0.10840895
       objectReference: {fileID: 0}
     - target: {fileID: 3891479165816870247, guid: df709b5970d39ec4d836e9ad010d15d8,
         type: 3}
@@ -6627,7 +6627,7 @@ PrefabInstance:
     - target: {fileID: 3891479165816870247, guid: df709b5970d39ec4d836e9ad010d15d8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.108408704
+      value: -0.10840866
       objectReference: {fileID: 0}
     - target: {fileID: 3891479165816870247, guid: df709b5970d39ec4d836e9ad010d15d8,
         type: 3}
@@ -27402,6 +27402,7 @@ MonoBehaviour:
   turnSmoothTime: 0.1
   gravity: 20
   isAiming: 0
+  isAttacking: 0
   mc: {fileID: 8892675618639949230}
   anim: {fileID: 596951569211549247}
 --- !u!4 &8968422184565423592
