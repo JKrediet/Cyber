@@ -22,14 +22,30 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isAiming == false)
         {
-            StartWalkAnim();
-             horizontal = Input.GetAxisRaw("Horizontal");
-             vertical = Input.GetAxisRaw("Vertical");
+            if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+            {
+                StartWalkAnim();
+            }
+            else
+            {
+                StartIdleAnim();
+            }
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
         }
-        else
+        if (Input.GetButton("Fire1"))
+        {
+            StartAtackSword1Anim();
+        }
+        if (Input.GetButton("Fire2"))
         {
             StartBowAimAnim();
         }
+        if (Input.GetButtonUp("Fire2"))
+        {
+            StartBowreleaseAnim();
+        }
+
 
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
@@ -72,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
     public void StartAtackSword1Anim()
     {
         StopAllAnim();
+        mc.swordb = true;
         int random = Random.Range(0, 2);
         if (random == 0)
         {
