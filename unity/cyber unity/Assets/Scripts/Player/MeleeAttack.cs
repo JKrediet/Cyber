@@ -10,6 +10,9 @@ public class MeleeAttack : MonoBehaviour
     public float maxMeleeDamage, meleeDamageIncreasement;
     private float baseDamage, meleeDamage;
 
+    // cooldown
+    private bool cooldown = false;
+
     // crit
     private int isCrit;
     private float baseCritChance, baseCritDamage;
@@ -31,20 +34,30 @@ public class MeleeAttack : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            meleeDamage = maxMeleeDamage;
-            //crit kans berekenen
-            isCrit = Random.Range(0, 101);
-            if (critChance >= isCrit)
+            if (cooldown == false)
             {
-                meleeDamage *= critDamage;
-            }
-            Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+                cooldown = true;
+                Invoke("Cooldown", 0.7f);
 
-            foreach (Collider enemy in hitEnemies)
-            {
-                enemy.GetComponent<HealthTotal>().Health(meleeDamage);
+                meleeDamage = maxMeleeDamage;
+                //crit kans berekenen
+                isCrit = Random.Range(0, 101);
+                if (critChance >= isCrit)
+                {
+                    meleeDamage *= critDamage;
+                }
+                Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+
+                foreach (Collider enemy in hitEnemies)
+                {
+                    enemy.GetComponent<HealthTotal>().Health(meleeDamage);
+                }
             }
         }
+    }
+    public void Cooldown()
+    {
+        cooldown = false;
     }
     public void Reset()
     {

@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal, vertical;
     public Mc mc;
     public Animator anim;
+    public bool menuActive;
 
     void Update()
     {
@@ -30,7 +31,15 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
-                    StartIdleAnim();
+                    if(menuActive == true)
+                    {
+                        MenuToActive();
+                    }
+                    else
+                    {
+                        MenuToFlase();
+                        StartIdleAnim();
+                    }
                 }
                 horizontal = Input.GetAxisRaw("Horizontal");
                 vertical = Input.GetAxisRaw("Vertical");
@@ -80,6 +89,16 @@ public class PlayerMovement : MonoBehaviour
         {
             isAiming = false;
         }
+    }
+    public void MenuToActive()
+    {
+        StopAllAnim();
+        anim.SetBool("menu", true);
+    }
+    public void MenuToFlase()
+    {
+        StopAllAnim();
+        anim.SetBool("menu", false);
     }
 
     public void IsAttacking()

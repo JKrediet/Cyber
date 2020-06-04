@@ -18,6 +18,7 @@ TagManager:
   - sword
   - raycastpoint
   - Arrow
+  - Camera
   layers:
   - Default
   - TransparentFX

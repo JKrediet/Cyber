@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PanelSwitcher : MonoBehaviour
 {
-    public GameObject rangedAttack, skillTree, escMenu;
+    public GameObject rangedAttack, skillTree, escMenu, cameraUit, player;
     public bool skillTreeActive, escMenuActive;
+    public Animator anim;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        cameraUit = GameObject.FindGameObjectWithTag("Camera");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
@@ -33,10 +37,21 @@ public class PanelSwitcher : MonoBehaviour
             if (escMenuActive == false)
             {
                 escMenuActive = true;
+                player.GetComponent<CharacterController>().enabled = false;
+                player.GetComponent<MeleeAttack>().enabled = false;
+                player.GetComponent<Mc>().enabled = false;
+                player.GetComponent<PlayerMovement>().menuActive = true;
+                cameraUit.SetActive(false);
             }
             else
             {
                 escMenuActive = false;
+                player.GetComponent<CharacterController>().enabled = true;
+                player.GetComponent<MeleeAttack>().enabled = true;
+                player.GetComponent<Mc>().enabled = true;
+                player.GetComponent<PlayerMovement>().menuActive = false;
+                cameraUit.SetActive(true);
+
             }
             EscMenuOn();
         }
@@ -64,6 +79,24 @@ public class PanelSwitcher : MonoBehaviour
         }
     }
     #endregion
+    public void Resume()
+    {
+        escMenuActive = false;
+        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<MeleeAttack>().enabled = true;
+        player.GetComponent<Mc>().enabled = true;
+        player.GetComponent<PlayerMovement>().menuActive = false;
+        cameraUit.SetActive(true);
+        EscMenuOn();
+    }
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void GetMeOuttaHere()
+    {
+        Application.Quit();
+    }
     #region SkillTreeOn
     public void SkillTreeOn()
     {
