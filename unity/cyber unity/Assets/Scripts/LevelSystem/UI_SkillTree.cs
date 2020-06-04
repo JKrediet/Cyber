@@ -59,7 +59,7 @@ public class UI_SkillTree : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Interaction"))
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Interaction") || Input.GetButtonDown("Escape"))
         {
             skillPointText.text = skillPointAmount.ToString();
             Invoke("Saves_UI", 1);

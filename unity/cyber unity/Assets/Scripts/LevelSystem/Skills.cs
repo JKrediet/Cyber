@@ -33,11 +33,11 @@ public class Skills : MonoBehaviour
         skillPointCount[7] = PlayerPrefs.GetInt("skillPointCount" + 7, 0);
         skillPointCount[8] = PlayerPrefs.GetInt("skillPointCount" + 8, 0);
 
-        SetSkillToTrue();
+        Repeat();
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Interaction"))
+        if (Input.GetButtonDown("Interaction") || Input.GetButtonDown("Tab") || Input.GetButtonDown("Escape"))
         {
             Saves_Skills();
         }
@@ -66,6 +66,11 @@ public class Skills : MonoBehaviour
         PlayerPrefs.SetInt("skillPointCount" + 8, skillPointCount[8]);
 
         PlayerPrefs.Save();
+    }
+    private void Repeat()
+    {
+        SetSkillToTrue();
+        Invoke("Repeat", 1);
     }
 
     #region skillnote to true/amount
@@ -198,5 +203,7 @@ public class Skills : MonoBehaviour
         skillPointCount[6] = 0;
         skillPointCount[7] = 0;
         skillPointCount[8] = 0;
+
+        Saves_Skills();
     }
 }

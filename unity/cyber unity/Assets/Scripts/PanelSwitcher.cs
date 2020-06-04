@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class PanelSwitcher : MonoBehaviour
 {
-    public GameObject rangedAttack, skillTree;
-    public bool skillTreeActive;
+    public GameObject rangedAttack, skillTree, escMenu;
+    public bool skillTreeActive, escMenuActive;
 
     private void Start()
     {
@@ -16,9 +16,9 @@ public class PanelSwitcher : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonDown("Escape"))
+        if (Input.GetButtonDown("Tab"))
         {
-            if(skillTreeActive == false)
+            if (skillTreeActive == false)
             {
                 skillTreeActive = true;
             }
@@ -28,8 +28,43 @@ public class PanelSwitcher : MonoBehaviour
             }
             SkillTreeOn();
         }
+        if (Input.GetButtonDown("Escape"))
+        {
+            if (escMenuActive == false)
+            {
+                escMenuActive = true;
+            }
+            else
+            {
+                escMenuActive = false;
+            }
+            EscMenuOn();
+        }
     }
+    #region escMenuOn
+    public void EscMenuOn()
+    {
+        if (escMenuActive == true)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
 
+            rangedAttack.SetActive(false);
+            skillTree.SetActive(false);
+            escMenu.SetActive(true);
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            rangedAttack.SetActive(true);
+            skillTree.SetActive(false);
+            escMenu.SetActive(false);
+        }
+    }
+    #endregion
+    #region SkillTreeOn
     public void SkillTreeOn()
     {
         if (skillTreeActive == true)
@@ -39,6 +74,7 @@ public class PanelSwitcher : MonoBehaviour
 
             rangedAttack.SetActive(false);
             skillTree.SetActive(true);
+            escMenu.SetActive(false);
         }
         else
         {
@@ -47,6 +83,8 @@ public class PanelSwitcher : MonoBehaviour
 
             rangedAttack.SetActive(true);
             skillTree.SetActive(false);
+            escMenu.SetActive(false);
         }
     }
+    #endregion
 }
