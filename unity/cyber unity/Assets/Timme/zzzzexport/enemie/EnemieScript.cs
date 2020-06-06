@@ -25,6 +25,7 @@ public class EnemieScript : MonoBehaviour
         HealthUpdate();
         Detact();
         EnemieMovement();
+        Test();
     }
     public void HealthUpdate()
     {
@@ -51,7 +52,7 @@ public class EnemieScript : MonoBehaviour
     }
     public void Detact()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out hit, attackRange))
+        if (Physics.Raycast(transform.position - new Vector3(0, 1, 0), transform.forward, out hit, attackRange))
         {
             if (hit.transform.tag == "Player")
             {
@@ -83,7 +84,7 @@ public class EnemieScript : MonoBehaviour
         isAtacking = true;
         GetComponent<NavMeshAgent>().speed = 0;
         StartAtackAnim();
-        player.GetComponent<Health>().DoDamage(enemieDamage);
+        player.GetComponent<HealthPlayer>().Health(enemieDamage);
         print("dodamgae");
         yield return new WaitForSeconds(3);
         print("loop");
@@ -177,5 +178,9 @@ public class EnemieScript : MonoBehaviour
         anim.SetBool("IsAtacking", false);
         anim.SetBool("IsWalking", false);
         anim.SetBool("IsDeath", false); ;
+    }
+    public void Test()
+    {
+        Debug.DrawRay(transform.position - new Vector3(0, 1, 0), transform.forward, Color.red);
     }
 }

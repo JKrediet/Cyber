@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Rune", menuName = "NewRuneVairable/Rune", order = 1)]
 public class Rune : ScriptableObject
@@ -9,7 +10,7 @@ public class Rune : ScriptableObject
 
     [Header("RuneVariable")]
     public string runeName;
-    public string runeDesc;
+    public Sprite runeDesc;
     [Header("RuneRewards")]
     public int skillPoint;
 }

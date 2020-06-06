@@ -15,5 +15,5 @@ MonoBehaviour:
   runeObject: {fileID: 3643537907266962087, guid: abfdbe3c3ce11de42a897645a75448ca,
     type: 3}
   runeName: oow, my ding ding dong!
-  runeDesc: '?'
-  skillPoint: 2
+  runeDesc: {fileID: 21300000, guid: 376524cc41819264a89c932fb4e8fe57, type: 3}
+  skillPoint: 5
