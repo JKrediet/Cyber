@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Level : MonoBehaviour
 {
     public int playerLevel, levelToGive;
-    public Slider expBar;
     public float expPoints;
 
 
@@ -26,7 +25,7 @@ public class Level : MonoBehaviour
     public void CurrentExp(float f)
     {
         expPoints += f;
-        expBar.value = expPoints;
+        //expBar.value = expPoints;
         if(expPoints >= 100)
         {
             expPoints -= 100;

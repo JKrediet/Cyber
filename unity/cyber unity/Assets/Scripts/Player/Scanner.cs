@@ -27,8 +27,6 @@ public class Scanner : MonoBehaviour
                 {
                     rune = hit.transform.gameObject.GetComponent<Reference>().rune;
                     print(rune.runeName);
-                    //print(rune.runeDesc);
-                    //print(rune.runeObject);
                 }
             }
             Test();
