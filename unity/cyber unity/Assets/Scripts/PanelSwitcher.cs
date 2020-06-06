@@ -36,21 +36,11 @@ public class PanelSwitcher : MonoBehaviour
         {
             if (escMenuActive == false)
             {
-                escMenuActive = true;
-                player.GetComponent<CharacterController>().enabled = false;
-                player.GetComponent<MeleeAttack>().enabled = false;
-                player.GetComponent<Mc>().enabled = false;
-                player.GetComponent<PlayerMovement>().menuActive = true;
-                cameraUit.SetActive(false);
+                Pauze();
             }
             else
             {
-                escMenuActive = false;
-                player.GetComponent<CharacterController>().enabled = true;
-                player.GetComponent<MeleeAttack>().enabled = true;
-                player.GetComponent<Mc>().enabled = true;
-                player.GetComponent<PlayerMovement>().menuActive = false;
-                cameraUit.SetActive(true);
+                Resume();
 
             }
             EscMenuOn();
@@ -79,6 +69,15 @@ public class PanelSwitcher : MonoBehaviour
         }
     }
     #endregion
+    public void Pauze()
+    {
+        escMenuActive = true;
+        player.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<MeleeAttack>().enabled = false;
+        player.GetComponent<Mc>().enabled = false;
+        player.GetComponent<PlayerMovement>().menuActive = true;
+        cameraUit.SetActive(false);
+    }
     public void Resume()
     {
         escMenuActive = false;

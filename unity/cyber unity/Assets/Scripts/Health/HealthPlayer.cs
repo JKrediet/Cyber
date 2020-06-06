@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthPlayer : HealthTotal
 {
     public float healthIncreasement, HealthRegenIncreasement, reducedDamageTakenIncreasement;
     private float baseHealth, healthRegen, baseRegen, reducedDamageTaken, baseReducedDamage;
+
+    public Slider healthSlider;
 
     private void Awake()
     {
@@ -22,6 +25,8 @@ public class HealthPlayer : HealthTotal
                 HealthRegen();
             }
         }
+        healthSlider.value = health;
+        healthSlider.maxValue = totalHealth;
     }
 
     public override void Health(float doDamage)
@@ -42,7 +47,7 @@ public class HealthPlayer : HealthTotal
     //maybe gebruiken?
     public void UsePotion(float heal)
     {
-        Mathf.Clamp(health, 0, totalHealth);
+        health = Mathf.Clamp(health, 0, totalHealth);
         health += heal;
     }
     #region skillnotes
@@ -53,7 +58,6 @@ public class HealthPlayer : HealthTotal
         newHealth += healthIncreasement * skillAmount;
 
         totalHealth = newHealth;
-        health = totalHealth;
 
         // naar stats in skilltree sturen
         StuurHealth();

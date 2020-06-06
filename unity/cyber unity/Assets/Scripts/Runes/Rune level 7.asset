@@ -15,5 +15,5 @@ MonoBehaviour:
   runeObject: {fileID: 3643537907266962087, guid: abfdbe3c3ce11de42a897645a75448ca,
     type: 3}
   runeName: Ooga Booga
-  runeDesc: Me give you a skilloint!
-  skillPoint: 1
+  runeDesc: {fileID: 21300000, guid: 6fbf27361e72d6f4d8b8261752735f87, type: 3}
+  skillPoint: 5
