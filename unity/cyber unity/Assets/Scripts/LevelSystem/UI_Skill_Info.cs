@@ -55,6 +55,7 @@ public class UI_Skill_Info : MonoBehaviour
         {
             Saves_Stats();
         }
+        Stats();
     }
     public void Saves_Stats()
     {

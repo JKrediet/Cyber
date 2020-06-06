@@ -15,7 +15,9 @@ public class HealthPlayer : HealthTotal
         baseHealth = totalHealth;
         baseRegen = healthRegen;
         baseReducedDamage = reducedDamageTaken;
+        Invoke("HealthGoedZetten", 1f);
     }
+
     private void Update()
     {
         if (healthRegen > 0)
@@ -32,7 +34,7 @@ public class HealthPlayer : HealthTotal
     public override void Health(float doDamage)
     {
         health -= doDamage - reducedDamageTaken;
-
+        print("doet pijn");
         if (health <= 0)
         {
             Destroy(gameObject, 3f);
@@ -42,6 +44,7 @@ public class HealthPlayer : HealthTotal
     //health regen in update
     public void HealthRegen()
     {
+        health = Mathf.Clamp(health, 0, totalHealth);
         health += healthRegen * Time.deltaTime;
     }
     //maybe gebruiken?
@@ -84,6 +87,11 @@ public class HealthPlayer : HealthTotal
         StuurReduction();
     }
     #endregion
+
+    public void HealthGoedZetten()
+    {
+        health = totalHealth;
+    }
 
     public void Reset()
     {
