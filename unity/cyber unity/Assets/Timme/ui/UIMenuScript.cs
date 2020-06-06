@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIMenuScript : MonoBehaviour
 {
-    public int void1, void2, void3, void4, void5, void6, void7, void8, void9, void10;
+    public int void1, void2, void3, void4, void5, void6;
     public Sprite[] levelImage;
     public GameObject story, mainMenu,level;
     public GameObject panel;
@@ -35,22 +35,6 @@ public class UIMenuScript : MonoBehaviour
     public void LoadScene6()
     {
         SceneManager.LoadScene(void6);
-    }
-    public void LoadScene7()
-    {
-        SceneManager.LoadScene(void7);
-    }
-    public void LoadScene8()
-    {
-        SceneManager.LoadScene(void8);
-    }
-    public void LoadScene9()
-    {
-        SceneManager.LoadScene(void9);
-    }
-    public void LoadScene10()
-    {
-        SceneManager.LoadScene(void10);
     }
     #endregion
     #region fototrue
