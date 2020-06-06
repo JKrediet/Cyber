@@ -8,11 +8,11 @@ public class EnemieScript : MonoBehaviour
     public Vector3 playerPosition, enemiePos;
     RaycastHit hit;
     public Animator anim;
-    public Transform player, attackPoint;
-    public bool hitplayer, isAtacking,playerInRange, doingIdle,walking,isBoss,isFinalBoss;
+    public Transform player;
+    public bool hitplayer, isAtacking, playerInRange, doingIdle, walking, isBoss, isFinalBoss;
     public int idleNumber;
     public float healtStatus, enemieDamage, attackRange, enemieSpeed;
-    public GameObject elevator,rune;
+    public GameObject elevator, rune;
     private void Start()
     {
         StartCoroutine(StartIdleAnim());
@@ -28,10 +28,10 @@ public class EnemieScript : MonoBehaviour
     }
     public void HealthUpdate()
     {
-        healtStatus = GetComponent<Health>().health;
+        healtStatus = GetComponent<HealthTestEnemy>().health;
         if (healtStatus <= 0)
-        {   
-                StartCoroutine(Death()); 
+        {
+            StartCoroutine(Death());
         }
     }
     IEnumerator Death()
@@ -40,11 +40,11 @@ public class EnemieScript : MonoBehaviour
         StartDeathAnim();
         if (isBoss == true)
         {
-            elevator.GetComponent<Elevator>().DeadBoss=true;
+            elevator.GetComponent<Elevator>().DeadBoss = true;
         }
         if (isFinalBoss == true)
         {
-          rune.SetActive(true);
+            rune.SetActive(true);
         }
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
@@ -54,28 +54,28 @@ public class EnemieScript : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, attackRange))
         {
             if (hit.transform.tag == "Player")
-            {           
+            {
                 if (player)
-                {               
+                {
                     Vector3 forward = transform.TransformDirection(Vector3.forward);
                     Vector3 toOther = player.position - transform.position;
                     if (Vector3.Dot(forward, toOther) < 0)
                     {
-                   
+
                         hitplayer = false;
                     }
                     if (Vector3.Dot(forward, toOther) > 0)
                     {
-                       
+
                         if (isAtacking == false)
                         {
                             print("5");
                             StartCoroutine(Atack());
                         }
                     }
-                } 
+                }
             }
-        }      
+        }
     }
     IEnumerator Atack()
     {
@@ -90,7 +90,7 @@ public class EnemieScript : MonoBehaviour
         GetComponent<NavMeshAgent>().speed = enemieSpeed;
         StartWalkAnim();
         isAtacking = false;
-        walking = true; 
+        walking = true;
     }
     public void OnTriggerEnter(Collider trigger)
     {
@@ -117,7 +117,7 @@ public class EnemieScript : MonoBehaviour
         {
             if (walking == true)
             {
-            StartWalkAnim();
+                StartWalkAnim();
             }
             agent.destination = playerPosition;
             doingIdle = false;
@@ -126,7 +126,7 @@ public class EnemieScript : MonoBehaviour
         {
             if (doingIdle == false)
             {
-            agent.destination = enemiePos;
+                agent.destination = enemiePos;
                 StartCoroutine(StartIdleAnim());
             }
         }
