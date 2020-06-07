@@ -1421,6 +1421,7 @@ MonoBehaviour:
   walking: 0
   isBoss: 0
   isFinalBoss: 0
+  isDeath: 0
   idleNumber: 0
   healtStatus: 0
   enemieDamage: 15
@@ -1507,9 +1508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc1feadd48a9584bbe290ca74f63657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   totalHealth: 0
-  expValue: 100000
+  expValue: 100
 --- !u!1 &8085177258058358624
 GameObject:
   m_ObjectHideFlags: 0
