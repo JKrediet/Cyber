@@ -17064,6 +17064,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GetMeOuttaHere
       objectReference: {fileID: 0}
+    - target: {fileID: 5087802285212379802, guid: f3a0a2bdb28271348b40f70defcb805f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1474539716}
+    - target: {fileID: 5087802285212379802, guid: f3a0a2bdb28271348b40f70defcb805f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseWindow
+      objectReference: {fileID: 0}
     - target: {fileID: 5087802285655588206, guid: f3a0a2bdb28271348b40f70defcb805f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -17933,6 +17943,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad6a3d9357d7fb408ba6f2b4840b350, type: 3}
+--- !u!114 &1474539716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6086465384885806462, guid: 3ad6a3d9357d7fb408ba6f2b4840b350,
+    type: 3}
+  m_PrefabInstance: {fileID: 1474539715}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821cc24d9b5d8aa41ad1b0f2093f2e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1475732475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 52d36bdb9f5196c48b9444efb9a8f947,

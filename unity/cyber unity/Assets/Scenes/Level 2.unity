@@ -4573,6 +4573,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 385891729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &385891732 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6086465384885806462, guid: 3ad6a3d9357d7fb408ba6f2b4840b350,
+    type: 3}
+  m_PrefabInstance: {fileID: 385891729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821cc24d9b5d8aa41ad1b0f2093f2e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &394959372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4782,6 +4794,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7688341973802177564, guid: daa3cb508778ec14289d4daa4a7ac069, type: 3}
+--- !u!114 &396059676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396059674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d436a9338585cb429151643d6319fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rune: {fileID: 11400000, guid: 49c0e185279982b44bc035c05d3ab171, type: 2}
 --- !u!1001 &400459149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8032,6 +8057,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GetMeOuttaHere
       objectReference: {fileID: 0}
+    - target: {fileID: 5087802285212379802, guid: f3a0a2bdb28271348b40f70defcb805f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 385891732}
+    - target: {fileID: 5087802285212379802, guid: f3a0a2bdb28271348b40f70defcb805f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseWindow
+      objectReference: {fileID: 0}
     - target: {fileID: 5087802285655588206, guid: f3a0a2bdb28271348b40f70defcb805f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -11106,12 +11141,12 @@ PrefabInstance:
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.11012139
+      value: -0.110121384
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.69847924
+      value: -0.6984793
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adfc31494a79ccc4c9869cbb114a0eb2, type: 3}

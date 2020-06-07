@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthPlayer : HealthTotal
 {
@@ -34,11 +35,15 @@ public class HealthPlayer : HealthTotal
     public override void Health(float doDamage)
     {
         health -= doDamage - reducedDamageTaken;
-        print("doet pijn");
+
         if (health <= 0)
         {
-            Destroy(gameObject, 3f);
+            Invoke("Dead", 2);
         }
+    }
+    public void Dead()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     //health regen in update
