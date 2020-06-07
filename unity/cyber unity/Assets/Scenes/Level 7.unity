@@ -14061,6 +14061,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6548913463070201805, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 21147fbce3975744ebf07d59f8993620, type: 2}
     - target: {fileID: 7718472097226067120, guid: f5c5e40655944e343848f1332daba890,
         type: 3}
       propertyPath: m_Name
@@ -15066,6 +15071,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6548913463070201805, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 21147fbce3975744ebf07d59f8993620, type: 2}
     - target: {fileID: 7718472097226067120, guid: f5c5e40655944e343848f1332daba890,
         type: 3}
       propertyPath: m_Name
@@ -17746,13 +17756,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1644562139516579932, guid: afc2ff8153cc89644bfb16da27f205cd,
         type: 3}
+<<<<<<< HEAD
       propertyPath: m_Name
       value: elevator
+=======
+      propertyPath: m_LocalRotation.x
+      value: 0.1337193
+>>>>>>> 0bb3b031629a16fee9351d7685bafbc1559b2d93
       objectReference: {fileID: 0}
     - target: {fileID: 2306987155941305624, guid: afc2ff8153cc89644bfb16da27f205cd,
         type: 3}
+<<<<<<< HEAD
       propertyPath: sceneInt
       value: 5
+=======
+      propertyPath: m_LocalRotation.z
+      value: 0.13371916
+>>>>>>> 0bb3b031629a16fee9351d7685bafbc1559b2d93
       objectReference: {fileID: 0}
     - target: {fileID: 2344670430937727567, guid: afc2ff8153cc89644bfb16da27f205cd,
         type: 3}
