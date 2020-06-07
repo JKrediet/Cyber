@@ -38,6 +38,7 @@ public class HealthPlayer : HealthTotal
 
         if (health <= 0)
         {
+            gameObject.SetActive(false);
             Invoke("Dead", 2);
         }
     }

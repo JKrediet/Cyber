@@ -3,7 +3,7 @@
 public class MeleeAttack : MonoBehaviour
 {
     public Transform attackPoint;
-    public float attackRange;
+    public float attackRange = 2;
     public LayerMask enemyLayers;
 
     // damage
