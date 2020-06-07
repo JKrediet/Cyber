@@ -9,7 +9,7 @@ public class EnemieScript : MonoBehaviour
     RaycastHit hit;
     public Animator anim;
     public Transform player;
-    public bool hitplayer, isAtacking, playerInRange, doingIdle, walking, isBoss, isFinalBoss;
+    public bool hitplayer, isAtacking, playerInRange, doingIdle, walking, isBoss, isFinalBoss,isDeath;
     public int idleNumber;
     public float healtStatus, enemieDamage, attackRange, enemieSpeed;
     public GameObject elevator, rune;
@@ -19,6 +19,7 @@ public class EnemieScript : MonoBehaviour
         hitplayer = false;
         isAtacking = false;
         GetComponent<NavMeshAgent>().speed = enemieSpeed;
+        isDeath = false;
     }
     void Update()
     {
@@ -32,6 +33,7 @@ public class EnemieScript : MonoBehaviour
         healtStatus = GetComponent<HealthTestEnemy>().health;
         if (healtStatus <= 0)
         {
+            isDeath = true;
             StartCoroutine(Death());
         }
     }
@@ -52,34 +54,40 @@ public class EnemieScript : MonoBehaviour
     }
     public void Detact()
     {
-        if (Physics.Raycast(transform.position - new Vector3(0, 1, 0), transform.forward, out hit, attackRange))
+        if (isDeath == false)
         {
-            if (hit.transform.tag == "Player")
+            if (Physics.Raycast(transform.position - new Vector3(0, 1, 0), transform.forward, out hit, attackRange))
             {
-                if (player)
+                if (hit.transform.tag == "Player")
                 {
-                    Vector3 forward = transform.TransformDirection(Vector3.forward);
-                    Vector3 toOther = player.position - transform.position;
-                    if (Vector3.Dot(forward, toOther) < 0)
+                    if (player)
                     {
-
-                        hitplayer = false;
-                    }
-                    if (Vector3.Dot(forward, toOther) > 0)
-                    {
-
-                        if (isAtacking == false)
+                        Vector3 forward = transform.TransformDirection(Vector3.forward);
+                        Vector3 toOther = player.position - transform.position;
+                        if (Vector3.Dot(forward, toOther) < 0)
                         {
-                            print("5");
-                            StartCoroutine(Atack());
+
+                            hitplayer = false;
+                        }
+                        if (Vector3.Dot(forward, toOther) > 0)
+                        {
+
+                            if (isAtacking == false)
+                            {
+                                print("5");
+                                StartCoroutine(Atack());
+                            }
                         }
                     }
                 }
             }
         }
     }
+
     IEnumerator Atack()
     {
+        if (isDeath == false)
+        {
         walking = false;
         isAtacking = true;
         GetComponent<NavMeshAgent>().speed = 0;
@@ -92,21 +100,28 @@ public class EnemieScript : MonoBehaviour
         StartWalkAnim();
         isAtacking = false;
         walking = true;
+        }
     }
     public void OnTriggerEnter(Collider trigger)
     {
         if (trigger.gameObject.transform.tag == "Player")
         {
-            playerInRange = true;
-            walking = true;
+            if (isDeath == false)
+            {
+                playerInRange = true;
+                walking = true;
+            }
         }
     }
     public void OnTriggerExit(Collider trigger)
     {
         if (trigger.gameObject.transform.tag == "Player")
         {
-            playerInRange = false;
-            walking = false;
+            if (isDeath == false)
+            {
+                playerInRange = false;
+                walking = false;
+            }
         }
     }
     public void EnemieMovement()
@@ -118,7 +133,10 @@ public class EnemieScript : MonoBehaviour
         {
             if (walking == true)
             {
-                StartWalkAnim();
+                if (isDeath == false)
+                {
+                    StartWalkAnim();
+                }
             }
             agent.destination = playerPosition;
             doingIdle = false;
