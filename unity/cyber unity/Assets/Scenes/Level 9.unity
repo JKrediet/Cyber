@@ -10080,12 +10080,12 @@ PrefabInstance:
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.14082968
+      value: 0.14082967
       objectReference: {fileID: 0}
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.14082964
+      value: 0.14082962
       objectReference: {fileID: 0}
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
@@ -10205,7 +10205,7 @@ PrefabInstance:
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11556582
+      value: -0.11556583
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
@@ -11584,11 +11584,11 @@ MonoBehaviour:
   enemieSpeed: 2.5
   elevator: {fileID: 0}
   rune: {fileID: 115398916}
-  walking_Sound: {fileID: 0}
-  atacking_Sound: {fileID: 0}
-  death_Sound: {fileID: 0}
-  idle_Sound: {fileID: 0}
-  mcHit_sound: {fileID: 0}
+  walking_Sound: {fileID: 5503472723174711749}
+  atacking_Sound: {fileID: 5503472722842189597}
+  death_Sound: {fileID: 5503472721504771255}
+  idle_Sound: {fileID: 5503472722657818057}
+  mcHit_sound: {fileID: 5503472721673803129}
 --- !u!114 &994071453546301187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13321,7 +13321,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 86168e8eb48a7f9419ef9b31b8931071, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 96fc4e59b42a17d4f922dce18b130433, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.08
   m_Pitch: 1
