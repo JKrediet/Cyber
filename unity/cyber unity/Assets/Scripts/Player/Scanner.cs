@@ -24,7 +24,7 @@ public class Scanner : MonoBehaviour
 
     public void RayCast()
     {
-        if (Physics.Raycast(raycastpoint.transform.position, transform.forward, out hit, 20))
+        if (Physics.Raycast(raycastpoint.transform.position, transform.forward, out hit, 3))
         {
             if (Input.GetButtonDown("Interaction"))
             {

@@ -25,10 +25,12 @@ public class PanelSwitcher : MonoBehaviour
             if (skillTreeActive == false)
             {
                 skillTreeActive = true;
+                Pauze();
             }
             else
             {
                 skillTreeActive = false;
+                Resume();
             }
             SkillTreeOn();
         }
@@ -36,12 +38,13 @@ public class PanelSwitcher : MonoBehaviour
         {
             if (escMenuActive == false)
             {
+                escMenuActive = true;
                 Pauze();
             }
             else
             {
+                escMenuActive = false;
                 Resume();
-
             }
             EscMenuOn();
         }
@@ -71,21 +74,13 @@ public class PanelSwitcher : MonoBehaviour
     #endregion
     public void Pauze()
     {
-        escMenuActive = true;
-        player.GetComponent<CharacterController>().enabled = false;
-        player.GetComponent<MeleeAttack>().enabled = false;
-        player.GetComponent<Mc>().enabled = false;
-        player.GetComponent<PlayerMovement>().menuActive = true;
-        cameraUit.SetActive(false);
+        Time.timeScale = 0;
     }
     public void Resume()
     {
+        Time.timeScale = 1;
         escMenuActive = false;
-        player.GetComponent<CharacterController>().enabled = true;
-        player.GetComponent<MeleeAttack>().enabled = true;
-        player.GetComponent<Mc>().enabled = true;
-        player.GetComponent<PlayerMovement>().menuActive = false;
-        cameraUit.SetActive(true);
+        skillTreeActive = false;
         EscMenuOn();
     }
     public void ToMainMenu()

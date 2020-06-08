@@ -1309,12 +1309,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2890770970964190473}
   - component: {fileID: 6548913463070201805}
+  - component: {fileID: 2214224945926607191}
   - component: {fileID: 104953362588007481}
   - component: {fileID: 3492132763047275063}
-  - component: {fileID: 6363353413206809479}
   - component: {fileID: 8386434093615044803}
   - component: {fileID: 6137847160810300237}
-  - component: {fileID: 2214224945926607191}
   m_Layer: 8
   m_Name: new croc 1
   m_TagString: Enemy
@@ -1427,6 +1426,21 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0000017585699, y: 0.0019359859, z: 0.006851943}
     m_Extent: {x: 0.0057513257, y: 0.012918529, z: 0.010097975}
   m_DirtyAABB: 0
+--- !u!114 &2214224945926607191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7718472097226067120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc1feadd48a9584bbe290ca74f63657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  totalHealth: 0
+  expValue: 100
 --- !u!114 &104953362588007481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1487,19 +1501,6 @@ NavMeshAgent:
   m_BaseOffset: 1.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!65 &6363353413206809479
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7718472097226067120}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.5817935, y: 2.6361947, z: 4.9478416}
-  m_Center: {x: 0.0005174875, y: 1.2194812, z: -0.1660366}
 --- !u!65 &8386434093615044803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1512,7 +1513,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.5817935, y: 2.6361947, z: 4.9478416}
-  m_Center: {x: 0.0005174875, y: 1.2194812, z: -0.1660366}
+  m_Center: {x: 0.0005174875, y: 0, z: -0.1660366}
 --- !u!95 &6137847160810300237
 Animator:
   serializedVersion: 3
@@ -1532,21 +1533,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2214224945926607191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7718472097226067120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cc1feadd48a9584bbe290ca74f63657, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  totalHealth: 0
-  expValue: 100
 --- !u!1 &8085177258058358624
 GameObject:
   m_ObjectHideFlags: 0

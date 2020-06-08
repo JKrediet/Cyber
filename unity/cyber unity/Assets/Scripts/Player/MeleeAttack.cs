@@ -46,11 +46,16 @@ public class MeleeAttack : MonoBehaviour
                 {
                     meleeDamage *= critDamage;
                 }
-                Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+                Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange);
 
                 foreach (Collider enemy in hitEnemies)
                 {
-                    enemy.GetComponent<HealthTotal>().Health(meleeDamage);
+                    if (enemy.gameObject.tag == "Enemy")
+                    {
+                        print(enemy);
+                        enemy.gameObject.GetComponent<HealthTestEnemy>().Health(meleeDamage);
+                    }
+                    print(enemy.name);
                 }
             }
         }

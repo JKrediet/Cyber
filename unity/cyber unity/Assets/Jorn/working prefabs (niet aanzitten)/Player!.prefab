@@ -2284,6 +2284,7 @@ MonoBehaviour:
   raycastpoint: {fileID: 0}
   runeText: {fileID: 0}
   panel: {fileID: 0}
+  pressF: {fileID: 0}
 --- !u!114 &6086465384885806463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3320,7 +3321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8409453072120298651}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.028906848, y: 0.28999996, z: 0.25028238}
+  m_LocalPosition: {x: 0.01, y: 1.79, z: 0.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7074066351190611831}
@@ -3352,7 +3353,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8409453072483999808}
-  m_LocalRotation: {x: 0.17352156, y: -0.009618223, z: 0.0016947538, w: 0.9847816}
+  m_LocalRotation: {x: 0.17352158, y: -0.009618223, z: 0.0016947538, w: 0.9847816}
   m_LocalPosition: {x: 18.23086, y: 5.636123, z: -25.376116}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

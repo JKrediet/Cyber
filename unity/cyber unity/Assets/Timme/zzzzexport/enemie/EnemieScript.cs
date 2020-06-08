@@ -88,7 +88,6 @@ public class EnemieScript : MonoBehaviour
 
                             if (isAtacking == false)
                             {
-                                print("5");
                                 StartCoroutine(Atack());
                             }
                         }
@@ -106,10 +105,8 @@ public class EnemieScript : MonoBehaviour
         isAtacking = true;
         GetComponent<NavMeshAgent>().speed = 0;
         StartAtackAnim();
-        print("dodamgae");
         Invoke("DoDamage", (1));
         yield return new WaitForSeconds(3);
-        print("loop");
         GetComponent<NavMeshAgent>().speed = enemieSpeed;
         StartWalkAnim();
         isAtacking = false;
