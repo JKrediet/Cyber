@@ -121,28 +121,7 @@ public class EnemieScript : MonoBehaviour
         player.GetComponent<HealthPlayer>().Health(enemieDamage);
         mcHit_sound.GetComponent<AudioSource>().Play();
     }
-    public void OnTriggerEnter(Collider trigger)
-    {
-        if (trigger.gameObject.transform.tag == "Player")
-        {
-            if (isDeath == false)
-            {
-                playerInRange = true;
-                walking = true;
-            }
-        }
-    }
-    public void OnTriggerExit(Collider trigger)
-    {
-        if (trigger.gameObject.transform.tag == "Player")
-        {
-            if (isDeath == false)
-            {
-                playerInRange = false;
-                walking = false;
-            }
-        }
-    }
+   
     public void EnemieMovement()
     {
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
