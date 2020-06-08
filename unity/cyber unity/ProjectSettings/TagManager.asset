@@ -19,6 +19,7 @@ TagManager:
   - raycastpoint
   - Arrow
   - Camera
+  - PressF
   layers:
   - Default
   - TransparentFX

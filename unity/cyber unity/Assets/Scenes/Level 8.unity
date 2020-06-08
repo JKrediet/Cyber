@@ -6029,12 +6029,12 @@ PrefabInstance:
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.13371937
+      value: 0.13371935
       objectReference: {fileID: 0}
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.1337191
+      value: 0.13371909
       objectReference: {fileID: 0}
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
@@ -6159,22 +6159,22 @@ PrefabInstance:
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.10840908
+      value: -0.108409084
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6987471
+      value: 0.69874704
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.10840857
+      value: -0.10840856
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.69874716
+      value: -0.6987472
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
@@ -17243,6 +17243,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3a0a2bdb28271348b40f70defcb805f, type: 3}
+--- !u!1 &1392100956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8721042698024223982, guid: f3a0a2bdb28271348b40f70defcb805f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1392100955}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1399077877
 GameObject:
   m_ObjectHideFlags: 0
@@ -18003,6 +18009,11 @@ PrefabInstance:
       propertyPath: runeText
       value: 
       objectReference: {fileID: 808078373}
+    - target: {fileID: 6086465384885806462, guid: 3ad6a3d9357d7fb408ba6f2b4840b350,
+        type: 3}
+      propertyPath: pressF
+      value: 
+      objectReference: {fileID: 1392100956}
     - target: {fileID: 6086465384885806463, guid: 3ad6a3d9357d7fb408ba6f2b4840b350,
         type: 3}
       propertyPath: healthSlider

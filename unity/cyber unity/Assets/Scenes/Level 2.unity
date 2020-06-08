@@ -4626,6 +4626,11 @@ PrefabInstance:
       propertyPath: runeText
       value: 
       objectReference: {fileID: 741152222}
+    - target: {fileID: 6086465384885806462, guid: 3ad6a3d9357d7fb408ba6f2b4840b350,
+        type: 3}
+      propertyPath: pressF
+      value: 
+      objectReference: {fileID: 741152226}
     - target: {fileID: 6086465384885806463, guid: 3ad6a3d9357d7fb408ba6f2b4840b350,
         type: 3}
       propertyPath: healthSlider
@@ -5065,6 +5070,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rune tablet
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: daa3cb508778ec14289d4daa4a7ac069,
+        type: 3}
+      propertyPath: m_TagString
+      value: Rune
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daa3cb508778ec14289d4daa4a7ac069, type: 3}
@@ -8560,6 +8570,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 741152218}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &741152226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8721042698024223982, guid: f3a0a2bdb28271348b40f70defcb805f,
+    type: 3}
+  m_PrefabInstance: {fileID: 741152218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &742276942
 GameObject:
   m_ObjectHideFlags: 0
@@ -11452,7 +11468,7 @@ PrefabInstance:
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.13535072
+      value: 0.13535073
       objectReference: {fileID: 0}
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
@@ -11462,7 +11478,7 @@ PrefabInstance:
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.13535047
+      value: 0.13535048
       objectReference: {fileID: 0}
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
@@ -11577,22 +11593,22 @@ PrefabInstance:
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11005063
+      value: -0.110050626
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6984904
+      value: 0.69849044
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.110050544
+      value: -0.110050574
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.69849056
+      value: -0.6984904
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adfc31494a79ccc4c9869cbb114a0eb2, type: 3}

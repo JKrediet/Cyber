@@ -2438,6 +2438,11 @@ PrefabInstance:
       propertyPath: runeText
       value: 
       objectReference: {fileID: 101357961}
+    - target: {fileID: 6086465384885806462, guid: 3ad6a3d9357d7fb408ba6f2b4840b350,
+        type: 3}
+      propertyPath: pressF
+      value: 
+      objectReference: {fileID: 1064252533}
     - target: {fileID: 6086465384885806463, guid: 3ad6a3d9357d7fb408ba6f2b4840b350,
         type: 3}
       propertyPath: healthSlider
@@ -6166,6 +6171,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3a0a2bdb28271348b40f70defcb805f, type: 3}
+--- !u!1 &1064252533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8721042698024223982, guid: f3a0a2bdb28271348b40f70defcb805f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1064252532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1071085591
 GameObject:
   m_ObjectHideFlags: 0
@@ -10064,7 +10075,7 @@ PrefabInstance:
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.14082965
+      value: 0.14082964
       objectReference: {fileID: 0}
     - target: {fileID: 661309899655716590, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
@@ -10099,7 +10110,7 @@ PrefabInstance:
     - target: {fileID: 661309899749809027, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.1282019
+      value: 0.12820189
       objectReference: {fileID: 0}
     - target: {fileID: 661309899749809027, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
@@ -10184,12 +10195,12 @@ PrefabInstance:
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11556583
+      value: -0.11556581
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.1155655
+      value: -0.115565486
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
@@ -10199,7 +10210,7 @@ PrefabInstance:
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.69759923
+      value: -0.6975993
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adfc31494a79ccc4c9869cbb114a0eb2, type: 3}
@@ -11554,6 +11565,8 @@ MonoBehaviour:
   isBoss: 0
   isFinalBoss: 1
   isDeath: 0
+  walkingSoundEffect: 0
+  deathSoundEffect: 0
   idleNumber: 0
   healtStatus: 0
   enemieDamage: 20
@@ -11561,6 +11574,11 @@ MonoBehaviour:
   enemieSpeed: 2.5
   elevator: {fileID: 0}
   rune: {fileID: 115398916}
+  walking_Sound: {fileID: 0}
+  atacking_Sound: {fileID: 0}
+  death_Sound: {fileID: 0}
+  idle_Sound: {fileID: 0}
+  mcHit_sound: {fileID: 0}
 --- !u!114 &994071453546301187
 MonoBehaviour:
   m_ObjectHideFlags: 0

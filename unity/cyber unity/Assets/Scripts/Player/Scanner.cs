@@ -10,7 +10,7 @@ public class Scanner : MonoBehaviour
     public GameObject raycastpoint;
 
     public Image runeText;
-    public GameObject panel;
+    public GameObject panel, pressF;
 
     private void Start()
     {
@@ -41,7 +41,7 @@ public class Scanner : MonoBehaviour
 
                     Cursor.lockState = CursorLockMode.Confined;
                     Cursor.visible = true;
-                }
+                }         
             }
             Test();
 
@@ -52,6 +52,16 @@ public class Scanner : MonoBehaviour
                 {
                     FindObjectOfType<Elevator>().buttonPressed = true;
                 }
+            }
+
+            //pressf to true/false
+            if (hit.transform.tag == "Rune" || hit.transform.tag == "Button")
+            {
+                pressF.SetActive(true);
+            }
+            else
+            {
+                pressF.SetActive(false);
             }
         }
     }
