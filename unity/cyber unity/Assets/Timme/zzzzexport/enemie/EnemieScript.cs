@@ -9,10 +9,12 @@ public class EnemieScript : MonoBehaviour
     RaycastHit hit;
     public Animator anim;
     public Transform player;
-    public bool hitplayer, isAtacking, playerInRange, doingIdle, walking, isBoss, isFinalBoss,isDeath;
+    public bool hitplayer, isAtacking, playerInRange, doingIdle, walking, isBoss, isFinalBoss,isDeath, walkingSoundEffect, deathSoundEffect;
     public int idleNumber;
     public float healtStatus, enemieDamage, attackRange, enemieSpeed;
     public GameObject elevator, rune;
+    [Header("sounds enemie")]
+    public GameObject walking_Sound, atacking_Sound, death_Sound, idle_Sound,mcHit_sound;
     private void Start()
     {
         StartCoroutine(StartIdleAnim());
@@ -27,6 +29,18 @@ public class EnemieScript : MonoBehaviour
         Detact();
         EnemieMovement();
         Test();
+        if (isDeath == true)
+        {
+            if (deathSoundEffect == false)
+            {
+                idle_Sound.GetComponent<AudioSource>().Stop();
+                mcHit_sound.GetComponent<AudioSource>().Stop();
+                atacking_Sound.GetComponent<AudioSource>().Stop();
+                walking_Sound.GetComponent<AudioSource>().Stop();
+                death_Sound.GetComponent<AudioSource>().Play();
+                deathSoundEffect = true;
+            }
+        }
     }
     public void HealthUpdate()
     {
@@ -92,8 +106,8 @@ public class EnemieScript : MonoBehaviour
         isAtacking = true;
         GetComponent<NavMeshAgent>().speed = 0;
         StartAtackAnim();
-        player.GetComponent<HealthPlayer>().Health(enemieDamage);
         print("dodamgae");
+        Invoke("DoDamage", (1));
         yield return new WaitForSeconds(3);
         print("loop");
         GetComponent<NavMeshAgent>().speed = enemieSpeed;
@@ -101,6 +115,11 @@ public class EnemieScript : MonoBehaviour
         isAtacking = false;
         walking = true;
         }
+    }
+    public void DoDamage()
+    {
+        player.GetComponent<HealthPlayer>().Health(enemieDamage);
+        mcHit_sound.GetComponent<AudioSource>().Play();
     }
     public void OnTriggerEnter(Collider trigger)
     {
@@ -159,6 +178,12 @@ public class EnemieScript : MonoBehaviour
         doingIdle = true;
         yield return new WaitForSeconds(0.01f);
         StopAllAnim();
+        walkingSoundEffect = false;
+        walking_Sound.GetComponent<AudioSource>().Stop();
+        if (isDeath == false)
+        {
+            idle_Sound.GetComponent<AudioSource>().Play();
+        }
         int random = Random.Range(0, 3);
         if (random == 0)
         {
@@ -176,15 +201,32 @@ public class EnemieScript : MonoBehaviour
     public void StartWalkAnim()
     {
         StopAllAnim();
+        if (walkingSoundEffect == false)
+        {
+              idle_Sound.GetComponent<AudioSource>().Stop();
+            if (isDeath == false)
+            {
+                walking_Sound.GetComponent<AudioSource>().Play();
+            }
+            walkingSoundEffect = true;
+        }
         anim.SetBool("IsWalking", true);
     }
     public void StartAtackAnim()
     {
         StopAllAnim();
+        walkingSoundEffect = false;
+        walking_Sound.GetComponent<AudioSource>().Stop();
+        idle_Sound.GetComponent<AudioSource>().Stop();
+        if (isDeath == false)
+        {
+            atacking_Sound.GetComponent<AudioSource>().Play();
+        }
         anim.SetBool("IsAtacking", true);
     }
     public void StartDeathAnim()
     {
+        walkingSoundEffect = true;
         StopAllAnim();
         anim.SetBool("IsDeath", true);
     }
@@ -196,6 +238,9 @@ public class EnemieScript : MonoBehaviour
         anim.SetBool("IsAtacking", false);
         anim.SetBool("IsWalking", false);
         anim.SetBool("IsDeath", false); ;
+        atacking_Sound.GetComponent<AudioSource>().Stop();
+        mcHit_sound.GetComponent<AudioSource>().Stop();
+        
     }
     public void Test()
     {
