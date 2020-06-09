@@ -38,13 +38,10 @@ public class HealthPlayer : HealthTotal
 
         if (health <= 0)
         {
+            //hier moet deathpanel!
+            FindObjectOfType<PanelSwitcher>().Dead();
             gameObject.SetActive(false);
-            Invoke("Dead", 2);
         }
-    }
-    public void Dead()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     //health regen in update

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PanelSwitcher : MonoBehaviour
 {
-    public GameObject rangedAttack, skillTree, escMenu, cameraUit, player;
-    public bool skillTreeActive, escMenuActive;
+    public GameObject rangedAttack, skillTree, escMenu, cameraUit, player, deathPanel;
+    public bool skillTreeActive, escMenuActive, dead;
     public Animator anim;
 
     private void Start()
@@ -20,33 +20,36 @@ public class PanelSwitcher : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Tab"))
+        if (dead == false)
         {
-            if (skillTreeActive == false)
+            if (Input.GetButtonDown("Tab"))
             {
-                skillTreeActive = true;
-                Pauze();
+                if (skillTreeActive == false)
+                {
+                    skillTreeActive = true;
+                    Pauze();
+                }
+                else
+                {
+                    skillTreeActive = false;
+                    Resume();
+                }
+                SkillTreeOn();
             }
-            else
+            if (Input.GetButtonDown("Escape"))
             {
-                skillTreeActive = false;
-                Resume();
+                if (escMenuActive == false)
+                {
+                    escMenuActive = true;
+                    Pauze();
+                }
+                else
+                {
+                    escMenuActive = false;
+                    Resume();
+                }
+                EscMenuOn();
             }
-            SkillTreeOn();
-        }
-        if (Input.GetButtonDown("Escape"))
-        {
-            if (escMenuActive == false)
-            {
-                escMenuActive = true;
-                Pauze();
-            }
-            else
-            {
-                escMenuActive = false;
-                Resume();
-            }
-            EscMenuOn();
         }
     }
     #region escMenuOn
@@ -90,6 +93,22 @@ public class PanelSwitcher : MonoBehaviour
     public void GetMeOuttaHere()
     {
         Application.Quit();
+    }
+    public void Dead()  
+    {
+        dead = true;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        escMenu.SetActive(false);
+        skillTree.SetActive(false);
+        rangedAttack.SetActive(false);
+
+        deathPanel.SetActive(true);
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     #region SkillTreeOn
     public void SkillTreeOn()
