@@ -876,7 +876,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6b94fff088c87b0499ff1558b2f3c139, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
@@ -2058,7 +2058,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 699227f88aefe15469488f9c6fa2232a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
@@ -2435,11 +2435,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fd2253bd98df0a7489a8e664a4d7e38d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2860,7 +2860,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 62d370f0baa12434782d1ebff3a7d68d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
@@ -3149,6 +3149,7 @@ GameObject:
   - component: {fileID: 6086465384885806457}
   - component: {fileID: 6086465384885806458}
   - component: {fileID: 6086465384885806459}
+  - component: {fileID: 2858765199033223531}
   m_Layer: 0
   m_Name: Player!
   m_TagString: Player
@@ -3381,6 +3382,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionCount: 0
   potionCountText: {fileID: 0}
+--- !u!114 &2858765199033223531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6086465384885806436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ed461a7fc5e1741a818fe5c3f796cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  running: {fileID: 4586462311687262505}
+  idle: {fileID: 426288807299577019}
+  bow_aiming: {fileID: 8264898676681909557}
+  bow_release: {fileID: 2136239222305573960}
+  melee_attack: {fileID: 1030809227137668483}
+  gettingHit: {fileID: 4191873111337635056}
+  buttonPressed: {fileID: 3620983297003808827}
+  zoof: {fileID: 5575372694265023519}
 --- !u!1 &6191803256434207756
 GameObject:
   m_ObjectHideFlags: 0
@@ -4664,8 +4685,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8409453072483999808}
-  m_LocalRotation: {x: 0.18129654, y: -0.009604514, z: 0.0017706901, w: 0.98338}
-  m_LocalPosition: {x: 47.436554, y: 18.456718, z: -51.079937}
+  m_LocalRotation: {x: 0.18094307, y: -0.00960508, z: 0.0017672405, w: 0.9834451}
+  m_LocalPosition: {x: 13.947501, y: 4.7446294, z: -11.008597}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8409453072548880075}

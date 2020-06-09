@@ -28,6 +28,11 @@ public class RangedAttack : MonoBehaviour
     }
     public void Attack()
     {
+        if(Input.GetButtonDown("Fire2"))
+        {
+            GetComponent<AudioMC>().Bow_aiming();
+        }
+
         if (Input.GetButton("Fire2"))
         {
             if (arrowSpeed <= maxArrowPower)
@@ -46,6 +51,10 @@ public class RangedAttack : MonoBehaviour
         }
         if (Input.GetButtonUp("Fire2"))
         {
+            GetComponent<AudioMC>().Bow_release();
+            GetComponent<AudioMC>().Zoof();
+
+
             // zorgen dat dmg niet meer dan max dmg is
             if (arrowDamage > maxArrowDamage)
             {

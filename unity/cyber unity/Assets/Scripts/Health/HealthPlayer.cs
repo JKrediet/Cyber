@@ -35,6 +35,7 @@ public class HealthPlayer : HealthTotal
     public override void Health(float doDamage)
     {
         health -= doDamage - reducedDamageTaken;
+        GetComponent<AudioMC>().GettingHit();
 
         if (health <= 0)
         {

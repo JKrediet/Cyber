@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal, vertical;
     public Mc mc;
     public Animator anim;
-    public bool menuActive;
+    public bool menuActive, temp;
 
     void Update()
     {
@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
                 {
+                    temp = true;
                     StartWalkAnim();
                 }
                 else
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
                         MenuToFlase();
                         StartIdleAnim();
                     }
+                    GetComponent<AudioMC>().StopDaMusic();
                 }
                 horizontal = Input.GetAxisRaw("Horizontal");
                 vertical = Input.GetAxisRaw("Vertical");
@@ -65,7 +67,13 @@ public class PlayerMovement : MonoBehaviour
             StopAllAnim();
             StartBowreleaseAnim();
         }
-
+        if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+        {
+            if (temp == true)
+            {
+                GetComponent<AudioMC>().Sound_running();
+            }
+        }
 
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
