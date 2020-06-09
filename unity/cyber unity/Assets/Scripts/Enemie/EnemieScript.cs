@@ -4,7 +4,7 @@ using UnityEngine.AI;
 public class EnemieScript : MonoBehaviour
 {
     [Header("variables enemie")]
-    public Vector3 playerPosition, enemiePos;
+    public Vector3 playerPosition, enemiePos, enemyHit;
     RaycastHit hit;
     public Animator anim;
     public Transform player;
@@ -21,6 +21,14 @@ public class EnemieScript : MonoBehaviour
         isAtacking = false;
         GetComponent<NavMeshAgent>().speed = enemieSpeed;
         isDeath = false;
+        if(isBoss == true)
+        {
+            enemyHit = new Vector3(0, 1.5f, 0);
+        }
+        else
+        {
+            enemyHit = new Vector3(0, 1, 0);
+        }
     }
     void Update()
     {
@@ -70,7 +78,7 @@ public class EnemieScript : MonoBehaviour
     {
         if (isDeath == false)
         {
-            if (Physics.Raycast(transform.position - new Vector3(0, 1, 0), transform.forward, out hit, attackRange))
+            if (Physics.Raycast(transform.position - enemyHit, transform.forward, out hit, attackRange))
             {
                 if (hit.transform.tag == "Player")
                 {
@@ -220,6 +228,6 @@ public class EnemieScript : MonoBehaviour
     }
     public void Test()
     {
-        Debug.DrawRay(transform.position - new Vector3(0, 1, 0), transform.forward, Color.red);
+        Debug.DrawRay(transform.position - enemyHit, transform.forward, Color.red);
     }
 }

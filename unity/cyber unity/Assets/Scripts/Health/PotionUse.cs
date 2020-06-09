@@ -8,6 +8,11 @@ public class PotionUse : MonoBehaviour
     public int potionCount;
     public TextMeshProUGUI potionCountText;
 
+    private void Awake()
+    {
+        potionCount = PlayerPrefs.GetInt("potionCount", 0);
+    }
+
     private void OnTriggerEnter(Collider col)
     {
         if (col.transform.tag == "Potion")
@@ -33,5 +38,16 @@ public class PotionUse : MonoBehaviour
             }
         }
         potionCountText.text = potionCount.ToString();
+
+        if (Input.GetButtonDown("Interaction") || Input.GetButtonDown("Tab") || Input.GetButtonDown("Escape"))
+        {
+            Saves_Skills();
+        }
+    }
+    public void Saves_Skills()
+    {
+        PlayerPrefs.SetInt("potionCount", potionCount);
+
+        PlayerPrefs.Save();
     }
 }
