@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class Scanner : MonoBehaviour
@@ -74,6 +75,11 @@ public class Scanner : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+    public void ToDaCreditsWeGo()
+    {
+        SceneManager.LoadScene(0);
+        //hier nog ff credits
     }
     public void Test()
     {

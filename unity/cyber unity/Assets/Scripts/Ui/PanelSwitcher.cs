@@ -77,6 +77,12 @@ public class PanelSwitcher : MonoBehaviour
     #endregion
     public void Pauze()
     {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject enemy in enemies)
+        {
+            enemy.GetComponent<EnemieScript>().StopAllSound();
+        }
+        GetComponent<AudioMC>().StopDaMusic();
         Time.timeScale = 0;
     }
     public void Resume()

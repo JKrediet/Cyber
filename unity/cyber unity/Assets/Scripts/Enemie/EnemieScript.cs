@@ -131,7 +131,7 @@ public class EnemieScript : MonoBehaviour
     {
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
         enemiePos = transform.position;
-        UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
         if (playerInRange == true)
         {
             if (walking == true)
@@ -225,6 +225,14 @@ public class EnemieScript : MonoBehaviour
         atacking_Sound.GetComponent<AudioSource>().Stop();
         mcHit_sound.GetComponent<AudioSource>().Stop();
         
+    }
+    public void StopAllSound()
+    {
+        atacking_Sound.GetComponent<AudioSource>().Stop();
+        mcHit_sound.GetComponent<AudioSource>().Stop();
+        walking_Sound.GetComponent<AudioSource>().Stop();
+        idle_Sound.GetComponent<AudioSource>().Stop();
+        death_Sound.GetComponent<AudioSource>().Stop();
     }
     public void Test()
     {
