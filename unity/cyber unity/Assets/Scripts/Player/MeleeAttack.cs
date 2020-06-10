@@ -11,7 +11,7 @@ public class MeleeAttack : MonoBehaviour
     private float baseDamage, meleeDamage;
 
     // cooldown
-    private bool cooldown = false;
+    public bool cooldown = false;
 
     // crit
     private int isCrit;
@@ -115,7 +115,7 @@ public class MeleeAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurMDamage", 1);
+            Invoke("StuurMDamage", 0.1f);
         }
     }
     public void StuurMCChance()
@@ -126,7 +126,7 @@ public class MeleeAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurMCChance", 1);
+            Invoke("StuurMCChance", 0.1f);
         }
     }
     public void StuurMCDamage()
@@ -137,7 +137,7 @@ public class MeleeAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurMCDamage", 1);
+            Invoke("StuurMCDamage", 0.1f);
         }
     }
 

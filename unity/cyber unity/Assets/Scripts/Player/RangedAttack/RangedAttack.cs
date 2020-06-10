@@ -35,6 +35,7 @@ public class RangedAttack : MonoBehaviour
 
         if (Input.GetButton("Fire2"))
         {
+            GetComponent<MeleeAttack>().cooldown = true;
             if (arrowSpeed <= maxArrowPower)
             {
                 arrowSpeed += aimPower * Time.deltaTime;
@@ -53,7 +54,7 @@ public class RangedAttack : MonoBehaviour
         {
             GetComponent<AudioMC>().Bow_release();
             GetComponent<AudioMC>().Zoof();
-
+            GetComponent<MeleeAttack>().cooldown = false;
 
             // zorgen dat dmg niet meer dan max dmg is
             if (arrowDamage > maxArrowDamage)
@@ -124,7 +125,7 @@ public class RangedAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurRDamage", 1);
+            Invoke("StuurRDamage", 0.1f);
         }
     }
     public void StuurRCChance()
@@ -135,7 +136,7 @@ public class RangedAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurRCChance", 1);
+            Invoke("StuurRCChance", 0.1f);
         }
     }
     public void StuurRCDamage()
@@ -146,7 +147,7 @@ public class RangedAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurRCDamage", 1);
+            Invoke("StuurRCDamage", 0.1f);
         }
     }
     #endregion

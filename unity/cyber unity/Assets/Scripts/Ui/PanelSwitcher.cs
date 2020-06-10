@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PanelSwitcher : MonoBehaviour
 {
     public GameObject rangedAttack, skillTree, escMenu, cameraUit, player, deathPanel;
-    public bool skillTreeActive, escMenuActive, dead;
+    public bool skillTreeActive, escMenuActive, dead, cursorLos;
     public Animator anim;
 
     private void Start()
@@ -20,6 +20,20 @@ public class PanelSwitcher : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetButtonDown("Alt"))
+        {
+            if (cursorLos == true)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            if (cursorLos == false)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+
+        }
         if (dead == false)
         {
             if (Input.GetButtonDown("Tab"))

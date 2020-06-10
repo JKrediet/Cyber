@@ -184,6 +184,8 @@ public class Skills : MonoBehaviour
 
     public void Reset()
     {
+        PlayerPrefs.DeleteAll();
+
         skillsEnabled[0] = 0;
         skillsEnabled[1] = 0;
         skillsEnabled[2] = 0;

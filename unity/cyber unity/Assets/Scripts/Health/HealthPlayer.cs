@@ -112,7 +112,7 @@ public class HealthPlayer : HealthTotal
         }
         else
         {
-            Invoke("StuurHealth", 1);
+            Invoke("StuurHealth", 0.1f);
         }
     }
     public void StuurRegen()
@@ -123,7 +123,7 @@ public class HealthPlayer : HealthTotal
         }
         else
         {
-            Invoke("StuurRegen", 1);
+            Invoke("StuurRegen", 0.1f);
         }
     }
     public void StuurReduction()
@@ -134,7 +134,7 @@ public class HealthPlayer : HealthTotal
         }
         else
         {
-            Invoke("StuurReduction", 1);
+            Invoke("StuurReduction", 0.1f);
         }
     }
 }

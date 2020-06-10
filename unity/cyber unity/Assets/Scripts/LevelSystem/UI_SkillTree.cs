@@ -388,6 +388,7 @@ public class UI_SkillTree : MonoBehaviour
         rR5 = 0;
 
         skillPointAmount = totalSkillpoints;
+        totalSkillpoints = 0;
         ButtonToWhite();
         Skill_Quantity();
         FindObjectOfType<HealthPlayer>().Reset();
