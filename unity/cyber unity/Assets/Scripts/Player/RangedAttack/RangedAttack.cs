@@ -36,6 +36,7 @@ public class RangedAttack : MonoBehaviour
         if (Input.GetButton("Fire2"))
         {
             GetComponent<MeleeAttack>().cooldown = true;
+            aimPowerSlider.gameObject.SetActive(true);
             if (arrowSpeed <= maxArrowPower)
             {
                 arrowSpeed += aimPower * Time.deltaTime;
@@ -55,6 +56,7 @@ public class RangedAttack : MonoBehaviour
             GetComponent<AudioMC>().Bow_release();
             GetComponent<AudioMC>().Zoof();
             GetComponent<MeleeAttack>().cooldown = false;
+            aimPowerSlider.gameObject.SetActive(false);
 
             // zorgen dat dmg niet meer dan max dmg is
             if (arrowDamage > maxArrowDamage)
