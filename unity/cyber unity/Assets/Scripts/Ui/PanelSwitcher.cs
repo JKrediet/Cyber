@@ -82,7 +82,7 @@ public class PanelSwitcher : MonoBehaviour
         {
             enemy.GetComponent<EnemieScript>().StopAllSound();
         }
-        GetComponent<AudioMC>().StopDaMusic();
+        player.GetComponent<AudioMC>().StopDaMusic();
         Time.timeScale = 0;
     }
     public void Resume()

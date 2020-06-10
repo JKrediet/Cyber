@@ -138,10 +138,12 @@ public class PlayerMovement : MonoBehaviour
         if (random == 0)
         {
             anim.SetBool("IsAtackingSword1", true);
+            GetComponent<AudioMC>().Melee_attack1();
         }
         else if (random == 1)
         {
             anim.SetBool("IsAtackingSword2", true);
+            GetComponent<AudioMC>().Melee_attack2();
         }
     }
     public void StartBowAimAnim()

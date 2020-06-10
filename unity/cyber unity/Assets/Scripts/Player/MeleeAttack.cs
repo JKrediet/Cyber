@@ -39,7 +39,7 @@ public class MeleeAttack : MonoBehaviour
                 cooldown = true;
                 Invoke("Cooldown", 0.7f);
 
-                GetComponent<AudioMC>().Melee_attack();
+                
                 meleeDamage = maxMeleeDamage;
                 //crit kans berekenen
                 isCrit = Random.Range(0, 101);

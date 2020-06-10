@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioMC : MonoBehaviour
 {
-    public GameObject running, idle, bow_aiming, bow_release, melee_attack, gettingHit, buttonPressed, zoof;
+    public GameObject running, idle, bow_aiming, bow_release, melee_attack1, melee_attack2, gettingHit, buttonPressed, zoof;
 
     public void Sound_running()
     {
@@ -16,10 +16,15 @@ public class AudioMC : MonoBehaviour
         StopDaMusic();
         bow_aiming.GetComponent<AudioSource>().Play();
     }
-    public void Melee_attack()
+    public void Melee_attack1()
     {
         StopDaMusic();
-        melee_attack.GetComponent<AudioSource>().Play();
+        melee_attack1.GetComponent<AudioSource>().Play();
+    }
+    public void Melee_attack2()
+    {
+        StopDaMusic();
+        melee_attack2.GetComponent<AudioSource>().Play();
     }
     public void GettingHit()
     {
@@ -48,7 +53,8 @@ public class AudioMC : MonoBehaviour
         idle.GetComponent<AudioSource>().Stop();
         bow_aiming.GetComponent<AudioSource>().Stop();
         bow_release.GetComponent<AudioSource>().Stop();
-        melee_attack.GetComponent<AudioSource>().Stop();
+        melee_attack1.GetComponent<AudioSource>().Stop();
+        melee_attack2.GetComponent<AudioSource>().Stop();
         gettingHit.GetComponent<AudioSource>().Stop();
         buttonPressed.GetComponent<AudioSource>().Stop();
     }
