@@ -1,5 +1,4 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class Elevator : MonoBehaviour
 {
     public Animator anim;
-    public bool lightTrigger,buttonPressed,DeadBoss;
+    public bool lightTrigger,buttonPressed,DeadBoss,button_sound,door_sound;
     public int deurDichtGaanTijd;
     public int sceneInt;
-    public GameObject hitBox;
+    public GameObject hitBox,buttonElevator_sound, doorsElevator_sound;
 
     private void Start()
     {       
@@ -34,8 +33,8 @@ public class Elevator : MonoBehaviour
             {
                 print("ff kijken");
                 lightTrigger = true;
-                anim.SetInteger("Condition", 2);
-                Invoke("ClosingDoors", 2f);
+                ButtonPressed();
+                Invoke("ClosingDoors", 1f);
                 hitBox.SetActive(true);
 
             }
@@ -43,11 +42,20 @@ public class Elevator : MonoBehaviour
     }
     public void ButtonPressed()
     {
+        if (button_sound == false) {
+          buttonElevator_sound.GetComponent<AudioSource>().Play();
+            button_sound = true;
+        }
         anim.SetInteger("Condition", 2);
         Invoke("ClosingDoors", 0.2f);
     }
     public void ClosingDoors()
     {
+        if (door_sound == false)
+        {
+            doorsElevator_sound.GetComponent<AudioSource>().Play();
+            door_sound = true;
+        }
         anim.SetInteger("Condition", 3);
         Invoke("DoorClosed", (deurDichtGaanTijd));
     }
