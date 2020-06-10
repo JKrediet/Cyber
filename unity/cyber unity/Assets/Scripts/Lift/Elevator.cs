@@ -31,7 +31,6 @@ public class Elevator : MonoBehaviour
         {
             if (DeadBoss == true)
             {
-                print("ff kijken");
                 lightTrigger = true;
                 ButtonPressed();
                 Invoke("ClosingDoors", 1f);
@@ -42,7 +41,8 @@ public class Elevator : MonoBehaviour
     }
     public void ButtonPressed()
     {
-        if (button_sound == false) {
+        if (button_sound == false)
+        {
           buttonElevator_sound.GetComponent<AudioSource>().Play();
             button_sound = true;
         }
