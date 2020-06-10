@@ -37,7 +37,7 @@ public class PotionUse : MonoBehaviour
                 }
             }
         }
-        potionCountText.text = potionCount.ToString();
+        potionCountText.text = potionCount.ToString() + "/3";
 
         if (Input.GetButtonDown("Interaction") || Input.GetButtonDown("Tab") || Input.GetButtonDown("Escape"))
         {
