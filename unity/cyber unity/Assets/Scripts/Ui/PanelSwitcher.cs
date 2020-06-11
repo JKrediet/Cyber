@@ -13,6 +13,8 @@ public class PanelSwitcher : MonoBehaviour
     {
         Time.timeScale = 1;
 
+        skillTree.SetActive(false);
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
