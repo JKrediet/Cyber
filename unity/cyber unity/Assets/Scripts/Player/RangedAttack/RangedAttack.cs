@@ -127,7 +127,7 @@ public class RangedAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurRDamage", 0.1f);
+            Invoke("StuurRDamage", 0.01f);
         }
     }
     public void StuurRCChance()
@@ -138,7 +138,7 @@ public class RangedAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurRCChance", 0.1f);
+            Invoke("StuurRCChance", 0.01f);
         }
     }
     public void StuurRCDamage()
@@ -149,7 +149,7 @@ public class RangedAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurRCDamage", 0.1f);
+            Invoke("StuurRCDamage", 0.01f);
         }
     }
     #endregion

@@ -11,6 +11,8 @@ public class Elevator : MonoBehaviour
     public int sceneInt;
     public GameObject hitBox,buttonElevator_sound, doorsElevator_sound;
 
+    public GameObject saveSkilltree;
+
     private void Start()
     {       
         hitBox.SetActive(false);       
@@ -34,8 +36,8 @@ public class Elevator : MonoBehaviour
                 lightTrigger = true;
                 ButtonPressed();
                 Invoke("ClosingDoors", 1f);
+                Invoke("SaveThemAll", 3f);
                 hitBox.SetActive(true);
-
             }
         }
     }
@@ -43,11 +45,12 @@ public class Elevator : MonoBehaviour
     {
         if (button_sound == false)
         {
-          buttonElevator_sound.GetComponent<AudioSource>().Play();
+            buttonElevator_sound.GetComponent<AudioSource>().Play();
             button_sound = true;
         }
         anim.SetInteger("Condition", 2);
         Invoke("ClosingDoors", 0.2f);
+
     }
     public void ClosingDoors()
     {
@@ -57,9 +60,12 @@ public class Elevator : MonoBehaviour
             door_sound = true;
         }
         anim.SetInteger("Condition", 3);
-        Invoke("DoorClosed", (deurDichtGaanTijd));
+        Invoke("DoorClosed", deurDichtGaanTijd);
     }
-    
+    public void SaveThemAll()
+    {
+        saveSkilltree.SetActive(true);
+    }
     
     public void DoorClosed()
     {

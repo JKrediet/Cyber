@@ -29,7 +29,6 @@ public class AudioMC : MonoBehaviour
     public void GettingHit()
     {
         StopDaMusic();
-        gettingHit.GetComponent<AudioSource>().Play();
     }
     public void Bow_release()
     {

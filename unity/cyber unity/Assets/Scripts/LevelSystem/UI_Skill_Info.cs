@@ -51,10 +51,7 @@ public class UI_Skill_Info : MonoBehaviour
     //saves
     private void Update()
     {
-        if (Input.GetButtonDown("Interaction") || Input.GetButtonDown("Tab") || Input.GetButtonDown("Escape"))
-        {
-            Saves_Stats();
-        }
+        Saves_Stats();
         Stats();
     }
     public void Saves_Stats()

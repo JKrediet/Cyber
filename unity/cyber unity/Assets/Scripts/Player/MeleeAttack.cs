@@ -114,7 +114,7 @@ public class MeleeAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurMDamage", 0.1f);
+            Invoke("StuurMDamage", 0.01f);
         }
     }
     public void StuurMCChance()
@@ -125,7 +125,7 @@ public class MeleeAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurMCChance", 0.1f);
+            Invoke("StuurMCChance", 0.01f);
         }
     }
     public void StuurMCDamage()
@@ -136,7 +136,7 @@ public class MeleeAttack : MonoBehaviour
         }
         else
         {
-            Invoke("StuurMCDamage", 0.1f);
+            Invoke("StuurMCDamage", 0.01f);
         }
     }
 
