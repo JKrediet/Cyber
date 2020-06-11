@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PanelSwitcher : MonoBehaviour
 {
-    public GameObject rangedAttack, skillTree, escMenu, cameraUit, player, deathPanel;
+    public GameObject rangedAttack, skillTree, escMenu, cameraUit, player, deathPanel, controlPanel, infoPanel;
     public bool skillTreeActive, escMenuActive, dead, cursorLos;
     public Animator anim;
 
@@ -49,6 +49,8 @@ public class PanelSwitcher : MonoBehaviour
                     Resume();
                 }
                 SkillTreeOn();
+                controlPanel.SetActive(false);
+                infoPanel.SetActive(false);
             }
             if (Input.GetButtonDown("Escape"))
             {
@@ -105,6 +107,26 @@ public class PanelSwitcher : MonoBehaviour
         escMenuActive = false;
         skillTreeActive = false;
         EscMenuOn();
+    }
+    public void Controls()
+    {
+        escMenuActive = false;
+        controlPanel.SetActive(true);
+    }
+    public void AwayControls()
+    {
+        escMenuActive = true;
+        controlPanel.SetActive(false);
+    }
+    public void Info()
+    {
+        escMenuActive = false;
+        infoPanel.SetActive(true);
+    }
+    public void AwayINfo()
+    {
+        escMenuActive = true;
+        infoPanel.SetActive(false);
     }
     public void ToMainMenu()
     {

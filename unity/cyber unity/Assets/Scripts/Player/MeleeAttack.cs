@@ -56,7 +56,6 @@ public class MeleeAttack : MonoBehaviour
                         print(enemy);
                         enemy.gameObject.GetComponent<HealthTestEnemy>().Health(meleeDamage);
                     }
-                    print(enemy.name);
                 }
             }
         }
