@@ -11,6 +11,8 @@ public class PanelSwitcher : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -91,7 +93,7 @@ public class PanelSwitcher : MonoBehaviour
         }
     }
     #endregion
-    public void Pauze()
+    public void Pauze() // enemy.gameObject.tag == "Boss"
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(GameObject enemy in enemies)
