@@ -5373,6 +5373,11 @@ PrefabInstance:
       propertyPath: sceneInt
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2306987155941305624, guid: afc2ff8153cc89644bfb16da27f205cd,
+        type: 3}
+      propertyPath: saveSkilltree
+      value: 
+      objectReference: {fileID: 741152221}
     - target: {fileID: 2306987155941305625, guid: afc2ff8153cc89644bfb16da27f205cd,
         type: 3}
       propertyPath: m_NavMeshLayer

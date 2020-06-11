@@ -123,9 +123,12 @@ public class EnemieScript : MonoBehaviour
     }
     public void DoDamage()
     {
+        if (isDeath == false)
+        {
         player.gameObject.GetComponent<HealthPlayer>().Health(enemieDamage);
         mcHit_sound.GetComponent<AudioSource>().Play();
         player.gameObject.GetComponent<AudioMC>().GettingHit();
+        }
     }
    
     public void EnemieMovement()

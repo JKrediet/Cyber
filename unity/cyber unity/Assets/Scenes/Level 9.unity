@@ -1577,6 +1577,31 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 471707653}
+    - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 172.52953
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 405.37225
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -17.916107
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.940576
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 37.69171
+      objectReference: {fileID: 0}
     - target: {fileID: 2365249456566657521, guid: f5c5e40655944e343848f1332daba890,
         type: 3}
       propertyPath: m_audioClip
@@ -2580,6 +2605,31 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 471707653}
+    - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 288.47693
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 11.257319
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.940576
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 56.39024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 152.95248
+      objectReference: {fileID: 0}
     - target: {fileID: 2365249456566657521, guid: f5c5e40655944e343848f1332daba890,
         type: 3}
       propertyPath: m_audioClip
@@ -11723,8 +11773,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 54.791298, y: 2.5918612, z: 72.549995}
-  m_Center: {x: -0.38460922, y: 1.1176999, z: 30.365406}
+  m_Size: {x: 302.10773, y: 2.5918612, z: 196.38779}
+  m_Center: {x: -15.496773, y: 1.1176999, z: 43.550156}
 --- !u!1 &1500173272644724758
 GameObject:
   m_ObjectHideFlags: 0
