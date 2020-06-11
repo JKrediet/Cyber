@@ -1455,6 +1455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPosition: {x: 0, y: 0, z: 0}
   enemiePos: {x: 0, y: 0, z: 0}
+  enemyHit: {x: 0, y: 0, z: 0}
   anim: {fileID: 6137847160810300237}
   player: {fileID: 0}
   hitplayer: 0
@@ -1853,6 +1854,86 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 86168e8eb48a7f9419ef9b31b8931071, type: 3}
+    - target: {fileID: 5892043714861998231, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: MinDistance
+      value: 5.3033524
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043714861998231, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043714861998231, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: Priority
+      value: 243
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043714861998231, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043715028937028, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: MinDistance
+      value: 5.438286
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043715028937028, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043715028937028, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: Priority
+      value: 243
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043715028937028, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716115696116, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: MinDistance
+      value: 5.130043
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716115696116, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716115696116, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: Priority
+      value: 243
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716115696116, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716200973089, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: MinDistance
+      value: 5.570709
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716200973089, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716200973089, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: Priority
+      value: 243
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716200973089, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 5892043716455839601, guid: 868c032e0c0ff8e48954ea29ade244a3,
         type: 3}
       propertyPath: m_Name
@@ -1912,6 +1993,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716496285177, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: MinDistance
+      value: 5.4143066
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716496285177, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15835.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716496285177, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716496285177, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: Priority
+      value: 243
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892043716496285177, guid: 868c032e0c0ff8e48954ea29ade244a3,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 868c032e0c0ff8e48954ea29ade244a3, type: 3}
