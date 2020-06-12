@@ -796,6 +796,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSound: {fileID: 1834990641062961347}
+--- !u!1 &3375416348734588889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3000717936165786388}
+  - component: {fileID: 5023967041502806619}
+  m_Layer: 5
+  m_Name: skillthree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3000717936165786388
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3375416348734588889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4712126380231220335}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5023967041502806619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3375416348734588889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411a306dfc5268c4aac575d4254c5916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthCount: 0
+  maxRegenCount: 0
+  maxReducedDamageCount: 0
+  maxMeleeDamageCount: 0
+  maxRangedDamageCount: 0
+  maxMeleeCritChanceCount: 0
+  maxMeleeCritDamageCount: 0
+  maxRangedCritChanceCount: 0
+  maxRangedCritDamageCount: 0
+  hR5: 0
+  mR5: 0
+  rR5: 0
+  skillPointAmount: 0
+  skillPointText: {fileID: 4712126381733985700}
+  Skill_Counter: 000000000000000000000000000000000000000000000000000000000000000000000000
+  Skill_CountText:
+  - {fileID: 4712126380347585089}
+  - {fileID: 4712126381868419260}
+  - {fileID: 4712126380515525461}
+  - {fileID: 4712126381133344795}
+  - {fileID: 4712126379883429685}
+  - {fileID: 4712126380459405143}
+  - {fileID: 4712126381150677765}
+  - {fileID: 4712126380101178587}
+  - {fileID: 4712126381273527543}
 --- !u!1 &4224820249688349654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,6 +2194,7 @@ RectTransform:
   - {fileID: 2117469590522176089}
   - {fileID: 7043598978480233615}
   - {fileID: 7094372666991011210}
+  - {fileID: 3000717936165786388}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3956,7 +4030,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5087802283833200132}
+      - m_Target: {fileID: 0}
         m_MethodName: Skill_ReducedDamageTaken
         m_Mode: 1
         m_Arguments:
@@ -4191,7 +4265,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5087802283833200132}
+      - m_Target: {fileID: 0}
         m_MethodName: Skill_RangedCritDamage
         m_Mode: 1
         m_Arguments:
@@ -5194,7 +5268,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5087802283833200132}
+      - m_Target: {fileID: 0}
         m_MethodName: Skill_HealthRegen
         m_Mode: 1
         m_Arguments:
@@ -6675,7 +6749,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5087802283833200132}
+      - m_Target: {fileID: 0}
         m_MethodName: Skill_MeleeDamage
         m_Mode: 1
         m_Arguments:
@@ -7354,7 +7428,6 @@ GameObject:
   - component: {fileID: 4712126381456664214}
   - component: {fileID: 4712126381456664232}
   - component: {fileID: 4712126381456664233}
-  - component: {fileID: 5087802283833200132}
   m_Layer: 5
   m_Name: UI_SkillTree
   m_TagString: Untagged
@@ -7430,43 +7503,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5087802283833200132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4712126381456664215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 411a306dfc5268c4aac575d4254c5916, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealthCount: 0
-  maxRegenCount: 0
-  maxReducedDamageCount: 0
-  maxMeleeDamageCount: 0
-  maxRangedDamageCount: 0
-  maxMeleeCritChanceCount: 0
-  maxMeleeCritDamageCount: 0
-  maxRangedCritChanceCount: 0
-  maxRangedCritDamageCount: 0
-  hR5: 0
-  mR5: 0
-  rR5: 0
-  skillPointAmount: 0
-  skillPointText: {fileID: 4712126381733985700}
-  Skill_Counter: 000000000000000000000000000000000000000000000000000000000000000000000000
-  Skill_CountText:
-  - {fileID: 4712126380347585089}
-  - {fileID: 4712126381868419260}
-  - {fileID: 4712126380515525461}
-  - {fileID: 4712126381133344795}
-  - {fileID: 4712126379883429685}
-  - {fileID: 4712126380459405143}
-  - {fileID: 4712126381150677765}
-  - {fileID: 4712126380101178587}
-  - {fileID: 4712126381273527543}
 --- !u!1 &4712126381482571977
 GameObject:
   m_ObjectHideFlags: 0
@@ -7832,7 +7868,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5087802283833200132}
+      - m_Target: {fileID: 0}
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
@@ -8121,7 +8157,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5087802283833200132}
+      - m_Target: {fileID: 0}
         m_MethodName: Skill_RangedDamage
         m_Mode: 1
         m_Arguments:
@@ -8605,7 +8641,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5087802283833200132}
+      - m_Target: {fileID: 0}
         m_MethodName: Skill_MeleeCritChance
         m_Mode: 1
         m_Arguments:
@@ -9207,7 +9243,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5087802283833200132}
+      - m_Target: {fileID: 0}
         m_MethodName: Skill_Health
         m_Mode: 1
         m_Arguments:
@@ -9525,7 +9561,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5087802283833200132}
+      - m_Target: {fileID: 0}
         m_MethodName: Skill_MeleeCritDamage
         m_Mode: 1
         m_Arguments:
@@ -9686,7 +9722,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5087802283833200132}
+      - m_Target: {fileID: 0}
         m_MethodName: Skill_RangedCritChance
         m_Mode: 1
         m_Arguments:

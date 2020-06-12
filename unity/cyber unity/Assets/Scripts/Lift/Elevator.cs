@@ -36,7 +36,7 @@ public class Elevator : MonoBehaviour
                 lightTrigger = true;
                 ButtonPressed();
                 Invoke("ClosingDoors", 1f);
-                Invoke("SaveThemAll", 3f);
+               // Invoke("SaveThemAll", 3f);
                 hitBox.SetActive(true);
             }
         }

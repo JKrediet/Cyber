@@ -10156,6 +10156,11 @@ PrefabInstance:
       propertyPath: mcHit_sound
       value: 
       objectReference: {fileID: 50202677}
+    - target: {fileID: 104953362588007481, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: enemieDamage
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
         type: 3}
       propertyPath: m_Size.z
@@ -10175,6 +10180,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.x
       value: 49.59745
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214224945926607191, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: health
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2365249455870793036, guid: f5c5e40655944e343848f1332daba890,
         type: 3}
@@ -12052,22 +12062,22 @@ PrefabInstance:
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11005063
+      value: -0.110050626
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6984904
+      value: 0.69849044
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.11005056
+      value: -0.11005057
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.6984905
+      value: -0.69849044
       objectReference: {fileID: 0}
     - target: {fileID: 661309901119770864, guid: adfc31494a79ccc4c9869cbb114a0eb2,
         type: 3}
@@ -20671,6 +20681,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 222010310}
+    - target: {fileID: 104953362588007481, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: enemieDamage
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 1265672803742259703, guid: f5c5e40655944e343848f1332daba890,
         type: 3}
       propertyPath: m_Size.z
@@ -20690,6 +20705,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.x
       value: 31.030453
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214224945926607191, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: health
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2365249455870793036, guid: f5c5e40655944e343848f1332daba890,
         type: 3}
@@ -24296,6 +24316,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 222010310}
+    - target: {fileID: 104953362588007481, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: enemieDamage
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 185854669170400036, guid: f5c5e40655944e343848f1332daba890,
         type: 3}
       propertyPath: m_Layer
@@ -24380,6 +24405,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214224945926607191, guid: f5c5e40655944e343848f1332daba890,
+        type: 3}
+      propertyPath: health
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2365249455870793036, guid: f5c5e40655944e343848f1332daba890,
         type: 3}
