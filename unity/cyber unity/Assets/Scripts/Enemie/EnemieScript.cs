@@ -151,7 +151,10 @@ public class EnemieScript : MonoBehaviour
                     StartWalkAnim();
                 }
             }
-            agent.destination = playerPosition;
+            if (isDeath == false)
+            {
+                agent.destination = playerPosition;
+            }
             doingIdle = false;
         }
         else
