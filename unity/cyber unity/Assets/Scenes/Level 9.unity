@@ -12155,8 +12155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc1feadd48a9584bbe290ca74f63657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
-  totalHealth: 300
+  health: 600
+  totalHealth: 600
   expValue: 0
 --- !u!95 &1808768218365128794
 Animator:
